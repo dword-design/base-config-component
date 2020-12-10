@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/dword-design/base-config-component/compare/v1.1.4...v1.1.5) (2020-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([d9c3adf](https://github.com/dword-design/base-config-component/commit/d9c3adfbdd0bc3bdff55be62453fdf0729ddaad8))
+
 ## [1.1.4](https://github.com/dword-design/base-config-component/compare/v1.1.3...v1.1.4) (2020-12-02)
 
 
