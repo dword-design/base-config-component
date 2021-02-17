@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "clean": "base clean",
+    "check-unknown-files": "base check-unknown-files",
     "commit": "base commit",
     "dev": "base dev",
     "lint": "base lint",
@@ -33,7 +33,7 @@
     "rollup": "^2.22.1"
   },
   "devDependencies": {
-    "@dword-design/base": "^6.24.1"
+    "@dword-design/base": "^7.0.0"
   },
   "publishConfig": {
     "access": "public"
