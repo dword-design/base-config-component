@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/dword-design/base-config-component/compare/v1.1.9...v1.1.10) (2021-03-23)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v3 ([#12](https://github.com/dword-design/base-config-component/issues/12)) ([dfdccad](https://github.com/dword-design/base-config-component/commit/dfdccad953048859d67cc5ed7f8a844504ec4f3a))
+
 ## [1.1.9](https://github.com/dword-design/base-config-component/compare/v1.1.8...v1.1.9) (2021-03-22)
 
 
