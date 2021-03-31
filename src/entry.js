@@ -4,7 +4,9 @@ import parsePkgName from 'parse-pkg-name'
 import { pascalCase } from 'pascal-case'
 
 const packageConfig = loadPkg.sync()
+
 const packageName = parsePkgName(packageConfig.name).name
+
 const componentName = packageName |> pascalCase
 
 export default endent`
