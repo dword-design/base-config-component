@@ -1200,10 +1200,10 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
-"@dword-design/rollup-config-component@^1.0.0":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@dword-design/rollup-config-component/-/rollup-config-component-1.0.11.tgz#36f6b1013eb48321b5272e65046a2c1685fcd5a8"
-  integrity sha512-dE6yy0WxbMriXtBAhzDEP0336BdLDecDTLiC0jHAC+6QgPDgSKN0oJ7f1qXyG0+p2e9+bTP6oIe7gF8OMnraLw==
+"@dword-design/rollup-config-component@^1.0.11":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@dword-design/rollup-config-component/-/rollup-config-component-1.0.12.tgz#431a39070cc0151c2927751b737910c5bbb6dd8f"
+  integrity sha512-9kVkngvHZBRsIvM+QlY7LiFeDAeQaP0Hp6N7g4VbYYrjlChBF/OmgF4VxCTDTjaONdciJhGCEcnSIULoBNFpfQ==
   dependencies:
     "@dword-design/functions" "^3.0.0"
     "@rollup/plugin-commonjs" "^17.0.0"
@@ -1211,10 +1211,10 @@
     fs-extra "^9.0.1"
     load-pkg "^4.0.0"
     minimist "^1.2.5"
-    parse-pkg-name "^2.0.0"
+    parse-packagejson-name "^1.0.1"
     rollup-plugin-babel "^4.4.0"
     rollup-plugin-terser "^7.0.0"
-    rollup-plugin-vue dword-design/rollup-plugin-vue#fork
+    rollup-plugin-vue "github:dword-design/rollup-plugin-vue#fork"
 
 "@eslint/eslintrc@^0.4.0":
   version "0.4.0"
@@ -7424,13 +7424,6 @@ output-files@^1.1.7:
     "@dword-design/functions" "^3.0.0"
     fs-extra "^9.0.0"
 
-ow@^0.15.1:
-  version "0.15.1"
-  resolved "https://registry.yarnpkg.com/ow/-/ow-0.15.1.tgz#ad21bb4d4c46d4478b948522e36b214f6f13039d"
-  integrity sha512-rwiuvCnk3Ug9T4s5oKzw3QXQSiTXlTUiQgHmZ9Ozw/37YzeX8LycosVKOtO3v5+fuARGmCgz9rVhaBJeGV+2bQ==
-  dependencies:
-    type-fest "^0.8.1"
-
 p-each-series@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-each-series/-/p-each-series-2.2.0.tgz#105ab0357ce72b202a8a8b94933672657b5e2a9a"
@@ -7648,11 +7641,6 @@ parse-json@^5.0.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-package-name@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/parse-package-name/-/parse-package-name-0.1.0.tgz#3f44dd838feb4c2be4bf318bae4477d7706bade4"
-  integrity sha1-P0Tdg4/rTCvkvzGLrkR313BrreQ=
-
 parse-packagejson-name@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parse-packagejson-name/-/parse-packagejson-name-1.0.1.tgz#ab5b322cd38c87b4a01620683cca56ad74c006a0"
@@ -7662,14 +7650,6 @@ parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
   integrity sha1-bVuTSkVpk7I9N/QKOC1vFmao5cY=
-
-parse-pkg-name@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/parse-pkg-name/-/parse-pkg-name-2.0.0.tgz#371086cd9bf03a8986bee56763cb2ec7f53024f0"
-  integrity sha512-jlikWandLTJEXOhr55uSnHfvnMUSW9g5PxWpkRt6mmuhdH9CfeJfnjJB97j7p9b7gCsJP1y78BovTF8dLjvoog==
-  dependencies:
-    ow "^0.15.1"
-    parse-package-name "^0.1.0"
 
 pascal-case@^2.0.0:
   version "2.0.1"
@@ -8686,8 +8666,9 @@ rollup-plugin-terser@^7.0.0:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup-plugin-vue@dword-design/rollup-plugin-vue#fork:
+"rollup-plugin-vue@github:dword-design/rollup-plugin-vue#fork":
   version "5.1.9"
+  uid cd6e2f19d2be7e4363532e00119c904696c0af7c
   resolved "https://codeload.github.com/dword-design/rollup-plugin-vue/tar.gz/cd6e2f19d2be7e4363532e00119c904696c0af7c"
   dependencies:
     "@vue/component-compiler" dword-design/vue-component-compiler#fork
