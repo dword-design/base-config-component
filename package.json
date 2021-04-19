@@ -31,7 +31,7 @@
     "load-pkg": "^4.0.0",
     "parse-pkg-name": "^2.0.0",
     "pascal-case": "^3.1.1",
-    "rollup": "^2.22.1"
+    "rollup": "^2.45.1"
   },
   "devDependencies": {
     "@dword-design/base": "^7.0.0"
