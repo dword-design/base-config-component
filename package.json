@@ -29,7 +29,7 @@
     "execa": "^5.0.0",
     "fs-extra": "^9.0.1",
     "load-pkg": "^4.0.0",
-    "parse-pkg-name": "^2.0.0",
+    "parse-packagejson-name": "^1.0.1",
     "pascal-case": "^3.1.1",
     "rollup": "^2.22.1"
   },
