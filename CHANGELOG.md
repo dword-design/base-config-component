@@ -1,3 +1,11 @@
+## [1.1.14](https://github.com/dword-design/base-config-component/compare/v1.1.13...v1.1.14) (2021-04-22)
+
+
+### Bug Fixes
+
+* update config files ([2294d4b](https://github.com/dword-design/base-config-component/commit/2294d4b610d1468d351bf24b3a7ed608a932177b))
+* updated package.json[description] ([#28](https://github.com/dword-design/base-config-component/issues/28)) ([cb36b4f](https://github.com/dword-design/base-config-component/commit/cb36b4f0a89c4ede13add6da3dc8fbed4c2e3426))
+
 ## [1.1.13](https://github.com/dword-design/base-config-component/compare/v1.1.12...v1.1.13) (2021-04-21)
 
 
