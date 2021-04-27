@@ -31,6 +31,7 @@ export default {
       }
     },
   },
+  coverageFileExtensions: ['.vue'],
   depcheckConfig: {
     parsers: {
       '*.scss': depcheckParserSass,
