@@ -1,3 +1,10 @@
+## [1.1.15](https://github.com/dword-design/base-config-component/compare/v1.1.14...v1.1.15) (2021-04-27)
+
+
+### Bug Fixes
+
+* remove eslint ([#31](https://github.com/dword-design/base-config-component/issues/31)) ([210281d](https://github.com/dword-design/base-config-component/commit/210281d00a833b9dce7f19d25bebf133f0c24fbb))
+
 ## [1.1.14](https://github.com/dword-design/base-config-component/compare/v1.1.13...v1.1.14) (2021-04-22)
 
 
