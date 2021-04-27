@@ -1,4 +1,3 @@
-import nodeConfig from '@dword-design/base-config-node'
 import depcheckParserSass from '@dword-design/depcheck-parser-sass'
 import { endent } from '@dword-design/functions'
 import packageName from 'depcheck-package-name'
@@ -10,7 +9,7 @@ import P from 'path'
 import entry from './entry'
 
 export default {
-  ...nodeConfig,
+  allowedMatches: ['src'],
   commands: {
     prepublishOnly: async () => {
       try {
@@ -38,17 +37,17 @@ export default {
       '*.vue': depcheckParserVue,
     },
   },
-  editorIgnore: [...nodeConfig.editorIgnore, '.browserslistrc'],
-  gitignore: [...nodeConfig.gitignore, '.browserslistrc'],
+  editorIgnore: ['dist', '.browserslistrc'],
+  gitignore: ['/dist', '.browserslistrc'],
+  npmPublish: true,
   packageConfig: {
     browser: 'dist/index.esm.js',
     main: 'dist/index.ssr.js',
     module: 'dist/index.esm.js',
     unpkg: 'dist/index.min.js',
   },
-  prepare: async () => {
-    await nodeConfig.prepare()
-    await outputFile(
+  prepare: () =>
+    outputFile(
       '.browserslistrc',
       endent`
         current node
@@ -56,6 +55,6 @@ export default {
         ie > 10
 
       `
-    )
-  },
+    ),
+  useJobMatrix: true,
 }
