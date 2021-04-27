@@ -9,6 +9,7 @@ import P from 'path'
 import entry from './entry'
 
 export default {
+  coverageFileExtensions: ['.vue'],
   allowedMatches: ['src'],
   commands: {
     prepublishOnly: async () => {
