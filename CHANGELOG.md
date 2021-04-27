@@ -1,3 +1,10 @@
+## [1.1.16](https://github.com/dword-design/base-config-component/compare/v1.1.15...v1.1.16) (2021-04-27)
+
+
+### Bug Fixes
+
+* add coverage file extensions ([#32](https://github.com/dword-design/base-config-component/issues/32)) ([0c536d2](https://github.com/dword-design/base-config-component/commit/0c536d2ff74623b1f5f4fe5640ee825721931050))
+
 ## [1.1.15](https://github.com/dword-design/base-config-component/compare/v1.1.14...v1.1.15) (2021-04-27)
 
 
