@@ -20,7 +20,6 @@
     "test": "base test"
   },
   "dependencies": {
-    "@dword-design/base-config-node": "^1.8.8",
     "@dword-design/depcheck-parser-sass": "^1.1.1",
     "@dword-design/functions": "^3.0.0",
     "@dword-design/rollup-config-component": "^1.0.0",
