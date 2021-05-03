@@ -1264,10 +1264,10 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
-"@dword-design/rollup-config-component@^1.0.0":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@dword-design/rollup-config-component/-/rollup-config-component-1.0.15.tgz#9483e82456dff15abaea911aa0dc2c2bf9eb0e9f"
-  integrity sha512-fbHvfJUonlsQgOfIR6+Vh1ptaXY63op0EGReni1d8d1TvUm48jMQsynC+hycAHJ10uvTsWWdKsBcBp6pOYv6BA==
+"@dword-design/rollup-config-component@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/rollup-config-component/-/rollup-config-component-2.0.0.tgz#fc65ba7940eb90ed27d7be6f1de4c897fa264a3c"
+  integrity sha512-KhNI0NXRjw/I7hgWKB1Ju3AE3hEe4OA4BzOrAbKzlM3ovuERlI5z3BlEKO6lEI0oOopMPV82ekpdbHh5EFFYwg==
   dependencies:
     "@dword-design/functions" "^3.0.0"
     "@rollup/plugin-commonjs" "^17.0.0"
