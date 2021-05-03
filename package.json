@@ -32,7 +32,7 @@
     "rollup": "^2.22.1"
   },
   "devDependencies": {
-    "@dword-design/base": "^7.0.0"
+    "@dword-design/base": "^8.0.0"
   },
   "publishConfig": {
     "access": "public"
