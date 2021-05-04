@@ -1,3 +1,10 @@
+## [1.1.21](https://github.com/dword-design/base-config-component/compare/v1.1.20...v1.1.21) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency depcheck-package-name to v2 ([#38](https://github.com/dword-design/base-config-component/issues/38)) ([2edb30e](https://github.com/dword-design/base-config-component/commit/2edb30e184a302f61454e9ab3acbf3fa18654c21))
+
 ## [1.1.20](https://github.com/dword-design/base-config-component/compare/v1.1.19...v1.1.20) (2021-05-04)
 
 
