@@ -1,3 +1,13 @@
+## [1.1.19](https://github.com/dword-design/base-config-component/compare/v1.1.18...v1.1.19) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/depcheck-parser-sass to v2 ([#35](https://github.com/dword-design/base-config-component/issues/35)) ([43a1fd1](https://github.com/dword-design/base-config-component/commit/43a1fd10a3c182ab01e5ac5fb5028c4d9bb92d8f))
+* update dependency @dword-design/rollup-config-component to v2 ([#37](https://github.com/dword-design/base-config-component/issues/37)) ([bbcd3c6](https://github.com/dword-design/base-config-component/commit/bbcd3c652659514c8a287879c8d5485181225653))
+* update dependency depcheck-parser-vue to v2 ([#39](https://github.com/dword-design/base-config-component/issues/39)) ([5c1b790](https://github.com/dword-design/base-config-component/commit/5c1b79047f9bb6beb108fd0e5eebc784c7f9d5b1))
+* update dependency fs-extra to v10 ([#40](https://github.com/dword-design/base-config-component/issues/40)) ([d891096](https://github.com/dword-design/base-config-component/commit/d8910967d753b5325648a16fce735ce6464eab4a))
+
 ## [1.1.18](https://github.com/dword-design/base-config-component/compare/v1.1.17...v1.1.18) (2021-05-03)
 
 
