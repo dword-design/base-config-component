@@ -14,7 +14,7 @@ export default endent`
   $ yarn add ${packageName}
   \`\`\`
 
-  Add to Local Components:
+  Add to local components:
 
   \`\`\`js
   import ${componentName} from '${packageName}'
