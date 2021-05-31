@@ -13,6 +13,7 @@ $ yarn add foo-bar
 Add to local components:
 
 \`\`\`js
+<script>
 import FooBar from 'foo-bar'
 
 export default {
@@ -20,6 +21,7 @@ export default {
     FooBar,
   },
 }
+</script>
 \`\`\`
 
 Or register as global component:
@@ -62,6 +64,7 @@ $ yarn add foo-bar
 Add to local components:
 
 \`\`\`js
+<script>
 import FooBar from 'foo-bar'
 
 export default {
@@ -69,6 +72,7 @@ export default {
     FooBar,
   },
 }
+</script>
 \`\`\`
 
 Or register as global component:

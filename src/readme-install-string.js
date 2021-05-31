@@ -17,6 +17,7 @@ export default endent`
   Add to local components:
 
   \`\`\`js
+  <script>
   import ${componentName} from '${packageName}'
 
   export default {
@@ -24,6 +25,7 @@ export default endent`
       ${componentName},
     },
   }
+  </script>
   \`\`\`
 
   Or register as global component:
