@@ -2,4 +2,7 @@ import loadPkg from 'load-pkg'
 
 const baseConfig = loadPkg.sync()?.baseConfig
 
-export default typeof baseConfig === 'string' ? {} : baseConfig
+export default {
+  cdnExtraScripts: [],
+  ...(typeof baseConfig === 'object' ? baseConfig : {}),
+}

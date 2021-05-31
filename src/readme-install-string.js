@@ -47,8 +47,12 @@ export default endent`
   ## Install Via CDN
 
   \`\`\`html
-  <script src="https://unpkg.com/vue"></script>
-  ${baseConfig.cdnExtraScripts |> join('\n')}
-  <script src="https://unpkg.com/${packageName}"></script>
+  ${
+    [
+      '<script src="https://unpkg.com/vue"></script>',
+      ...baseConfig.cdnExtraScripts,
+      `<script src="https://unpkg.com/${packageName}"></script>`,
+    ] |> join('\n')
+  }
   \`\`\`
 `

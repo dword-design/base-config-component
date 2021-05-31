@@ -5,7 +5,7 @@ import stealthyRequire from 'stealthy-require'
 
 export default tester(
   {
-    async valid() {
+    'extra scripts': async function () {
       await outputFile(
         'package.json',
         JSON.stringify({
@@ -17,6 +17,12 @@ export default tester(
           name: 'foo-bar',
         })
       )
+      expect(
+        stealthyRequire(require.cache, () => require('./readme-install-string'))
+      ).toMatchSnapshot(this)
+    },
+    async valid() {
+      await outputFile('package.json', JSON.stringify({ name: 'foo-bar' }))
       expect(
         stealthyRequire(require.cache, () => require('./readme-install-string'))
       ).toMatchSnapshot(this)

@@ -14,7 +14,13 @@ export default tester(
       )
       expect(
         stealthyRequire(require.cache, () => require('./base-config'))
-      ).toEqual({})
+      ).toEqual({ cdnExtraScripts: [] })
+    },
+    undefined: async () => {
+      await outputFile('package.json', JSON.stringify({}))
+      expect(
+        stealthyRequire(require.cache, () => require('./base-config'))
+      ).toEqual({ cdnExtraScripts: [] })
     },
     valid: async () => {
       await outputFile(
