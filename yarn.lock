@@ -1112,12 +1112,12 @@
     "@babel/preset-env" "^7.6.3"
     "@babel/preset-typescript" "^7.13.0"
     "@dword-design/functions" "^4.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^4.0.0"
     babel-plugin-transform-imports "^2.0.0"
-    babel-plugin-wildcard "github:dword-design/babel-plugin-wildcard#fork"
+    babel-plugin-wildcard dword-design/babel-plugin-wildcard#fork
     depcheck-package-name "^2.0.0"
     find-up "^5.0.0"
     param-case "^3.0.3"
@@ -1160,7 +1160,7 @@
     commitizen "^4.0.3"
     constant-case "^3.0.3"
     cz-conventional-changelog "^3.1.0"
-    depcheck "github:dword-design/depcheck#fork"
+    depcheck dword-design/depcheck#fork
     depcheck-detector-execa "^2.0.0"
     depcheck-detector-package-name "^2.0.0"
     depcheck-package-name "^2.0.0"
@@ -1197,6 +1197,11 @@
     spdx-license-list "^6.1.0"
     std-env "^2.3.0"
     yaml "^1.8.2"
+
+"@dword-design/chdir@^2.0.0":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@dword-design/chdir/-/chdir-2.0.3.tgz#6a1835beaac450110505516195f45f421a13eeed"
+  integrity sha512-qU8NYBCaigsrcWnGre9M1T6hgTANxJloPimXHndy0m7/ih5huaqFpQ5IOoPTuBm2PH/ijdGEy84iCvs+zzlONg==
 
 "@dword-design/ci@^3.0.0":
   version "3.0.3"
@@ -1259,7 +1264,7 @@
   integrity sha512-EAYwmcxWWoZ/1a5IHPYvbEviaV08WLorULewJ7kJ2R67Cm9lflXXzOXC8CNA9HRwGBwEGmZEVPV3ZRggYFowpg==
   dependencies:
     delay "^5.0.0"
-    endent "github:dword-design/endent#fork"
+    endent dword-design/endent#fork
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
@@ -1277,7 +1282,22 @@
     parse-packagejson-name "^1.0.1"
     rollup-plugin-babel "^4.4.0"
     rollup-plugin-terser "^7.0.0"
-    rollup-plugin-vue "github:dword-design/rollup-plugin-vue#fork"
+    rollup-plugin-vue dword-design/rollup-plugin-vue#fork
+
+"@dword-design/tester-plugin-tmp-dir@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@dword-design/tester-plugin-tmp-dir/-/tester-plugin-tmp-dir-2.0.3.tgz#249f72e6c781f23ee1a82f521e00bac6acd3a2a6"
+  integrity sha512-Wq1WW22JCGRI2W/ZNACFA31h9zt8nBi2t+uO3i9uX5sfazjs2sg24Dacgu18DCrScmy1cyA9DHCRnWSZBduX2Q==
+  dependencies:
+    with-local-tmp-dir "^4.0.0"
+
+"@dword-design/tester@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@dword-design/tester/-/tester-2.0.4.tgz#78ef92954ecb731e1c698c7d67af28da6f7cb537"
+  integrity sha512-s1vlr/B11I+0jTisHjI1WOEZzHNRvzMz8YVGurWu2BLWwKOEt81GvvFd1b8hWQGH97o5jVkZH3f4L4CiZP3bNw==
+  dependencies:
+    "@dword-design/functions" "^4.0.0"
+    promise-sequential "^1.1.1"
 
 "@eslint/eslintrc@^0.4.1":
   version "0.4.1"
@@ -1869,9 +1889,8 @@
     lodash.kebabcase "^4.1.1"
     svg-tags "^1.0.0"
 
-"@vue/babel-preset-jsx@github:dword-design/jsx#fork-babel-preset-jsx":
+"@vue/babel-preset-jsx@dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -1890,7 +1909,6 @@
 
 "@vue/babel-sugar-inject-h@dword-design/jsx#fork-babel-sugar-inject-h":
   version "1.1.2"
-  uid cc36a2200c059120f37944615fb2ec0e22f8f3cc
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/cc36a2200c059120f37944615fb2ec0e22f8f3cc"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
@@ -1934,7 +1952,6 @@
 
 "@vue/component-compiler@dword-design/vue-component-compiler#fork":
   version "4.2.3"
-  uid f428eec2731f86664bcd40723ba61a333fd9e8d2
   resolved "https://codeload.github.com/dword-design/vue-component-compiler/tar.gz/f428eec2731f86664bcd40723ba61a333fd9e8d2"
   dependencies:
     "@vue/component-compiler-utils" "^3.0.0"
@@ -2396,9 +2413,8 @@ babel-plugin-transform-imports@^2.0.0:
     "@babel/types" "^7.4"
     is-valid-path "^0.1.1"
 
-"babel-plugin-wildcard@github:dword-design/babel-plugin-wildcard#fork":
+babel-plugin-wildcard@dword-design/babel-plugin-wildcard#fork:
   version "6.0.0"
-  uid "691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   resolved "https://codeload.github.com/dword-design/babel-plugin-wildcard/tar.gz/691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   dependencies:
     rimraf "^2.6.2"
@@ -3423,7 +3439,6 @@ decode-uri-component@^0.2.0:
 
 dedent@0.7.0, dedent@dword-design/dedent#fork:
   version "0.7.0"
-  uid c8d46e5017d60504657c2d01b59082c0329a12a7
   resolved "https://codeload.github.com/dword-design/dedent/tar.gz/c8d46e5017d60504657c2d01b59082c0329a12a7"
   dependencies:
     babel-plugin-add-module-exports "^1.0.2"
@@ -3557,9 +3572,8 @@ depcheck-parser-vue@^2.0.0:
     fs-extra "^10.0.0"
     vue-template-compiler "^2.6.11"
 
-"depcheck@github:dword-design/depcheck#fork":
+depcheck@dword-design/depcheck#fork:
   version "0.0.1"
-  uid "8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   resolved "https://codeload.github.com/dword-design/depcheck/tar.gz/8a9eb41006c2c6f9cbd79e4e68bf265e1c1df1dc"
   dependencies:
     "@babel/parser" "^7.8.4"
@@ -3738,9 +3752,8 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-"endent@github:dword-design/endent#fork":
+endent@dword-design/endent#fork:
   version "1.4.0"
-  uid be5433db67eaec07c6c9d00ba3bed2ed946dc664
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
     dedent dword-design/dedent#fork
@@ -8052,7 +8065,6 @@ postcss-modules-scope@^1.0.2:
 
 postcss-modules-sync@dword-design/postcss-modules-sync#fork:
   version "1.0.0"
-  uid fe138e704dbbe9b37c395854cc74b364760f1a51
   resolved "https://codeload.github.com/dword-design/postcss-modules-sync/tar.gz/fe138e704dbbe9b37c395854cc74b364760f1a51"
   dependencies:
     generic-names "^1.0.2"
@@ -8182,6 +8194,11 @@ promise-retry@^2.0.1:
   dependencies:
     err-code "^2.0.2"
     retry "^0.12.0"
+
+promise-sequential@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/promise-sequential/-/promise-sequential-1.1.1.tgz#f79e8950ef86e7a7a85bf320452643592f6d2fb2"
+  integrity sha1-956JUO+G56eoW/MgRSZDWS9tL7I=
 
 promise@^7.0.1:
   version "7.3.1"
@@ -8835,9 +8852,8 @@ rollup-plugin-terser@^7.0.0:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-"rollup-plugin-vue@github:dword-design/rollup-plugin-vue#fork":
+rollup-plugin-vue@dword-design/rollup-plugin-vue#fork:
   version "5.1.9"
-  uid cd6e2f19d2be7e4363532e00119c904696c0af7c
   resolved "https://codeload.github.com/dword-design/rollup-plugin-vue/tar.gz/cd6e2f19d2be7e4363532e00119c904696c0af7c"
   dependencies:
     "@vue/component-compiler" dword-design/vue-component-compiler#fork
@@ -9414,6 +9430,11 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
+stealthy-require@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
+  integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
+
 stream-combiner2@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stream-combiner2/-/stream-combiner2-1.1.1.tgz#fb4d8a1420ea362764e21ad4780397bebcb41cbe"
@@ -9785,12 +9806,26 @@ tmatch@^2.0.1:
   resolved "https://registry.yarnpkg.com/tmatch/-/tmatch-2.0.1.tgz#0c56246f33f30da1b8d3d72895abaf16660f38cf"
   integrity sha1-DFYkbzPzDaG409colauvFmYPOM8=
 
+tmp-promise@^3.0.0:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/tmp-promise/-/tmp-promise-3.0.2.tgz#6e933782abff8b00c3119d63589ca1fb9caaa62a"
+  integrity sha512-OyCLAKU1HzBjL6Ev3gxUeraJNlbNingmi8IrHHEsYH8LTmEuhvYfqvhn2F/je+mjf4N58UmZ96OMEy1JanSCpA==
+  dependencies:
+    tmp "^0.2.0"
+
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
   integrity sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==
   dependencies:
     os-tmpdir "~1.0.2"
+
+tmp@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.2.1.tgz#8457fc3037dcf4719c251367a1af6500ee1ccf14"
+  integrity sha512-76SUhtfqR2Ijn+xllcI5P1oyannHNHByD80W1q447gU3mp9G9PSpGdWmjUOHRDPiHYacIk66W7ubDTuPF3BEtQ==
+  dependencies:
+    rimraf "^3.0.0"
 
 tmpl@1.0.x:
   version "1.0.4"
@@ -10292,6 +10327,14 @@ window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
   integrity sha1-VDjNLqk7IC76Ohn+iIeu58lPnJ0=
+
+with-local-tmp-dir@^4.0.0:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/with-local-tmp-dir/-/with-local-tmp-dir-4.0.4.tgz#3354cfc7efc2c02fb1649bc317abfedb98238631"
+  integrity sha512-CFTy2FFAVR0oXUfH2tVHgBwCOgejVTKwjhjgRY3oU55uR2sgMH9HcokyxfdsHUkgiAPUPRZdJETnbql5Eer7Aw==
+  dependencies:
+    "@dword-design/chdir" "^2.0.0"
+    tmp-promise "^3.0.0"
 
 with@^5.0.0:
   version "5.1.1"

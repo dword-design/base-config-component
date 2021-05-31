@@ -1,13 +1,6 @@
 import { endent } from '@dword-design/functions'
-import loadPkg from 'load-pkg'
-import parsePackagejsonName from 'parse-packagejson-name'
-import { pascalCase } from 'pascal-case'
 
-const packageConfig = loadPkg.sync()
-
-const packageName = parsePackagejsonName(packageConfig.name).fullName
-
-const componentName = packageName |> pascalCase
+import componentName from './component-name'
 
 export default endent`
   // Import vue component
