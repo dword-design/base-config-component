@@ -1,3 +1,10 @@
+## [1.1.26](https://github.com/dword-design/base-config-component/compare/v1.1.25...v1.1.26) (2021-06-10)
+
+
+### Bug Fixes
+
+* fix depcheck parsers ([0d9dc30](https://github.com/dword-design/base-config-component/commit/0d9dc309aec1524bc5e650848314cfdec389121b))
+
 ## [1.1.25](https://github.com/dword-design/base-config-component/compare/v1.1.24...v1.1.25) (2021-05-31)
 
 
