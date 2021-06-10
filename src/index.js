@@ -35,8 +35,8 @@ export default {
   coverageFileExtensions: ['.vue'],
   depcheckConfig: {
     parsers: {
-      '*.scss': depcheckParserSass,
-      '*.vue': depcheckParserVue,
+      '**/*.scss': depcheckParserSass,
+      '**/*.vue': depcheckParserVue,
     },
   },
   editorIgnore: ['dist', '.browserslistrc'],
