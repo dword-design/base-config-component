@@ -1127,12 +1127,12 @@
     "@babel/preset-env" "^7.6.3"
     "@babel/preset-typescript" "^7.13.0"
     "@dword-design/functions" "^4.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^4.0.0"
     babel-plugin-transform-imports "^2.0.0"
-    babel-plugin-wildcard "github:dword-design/babel-plugin-wildcard#fork"
+    babel-plugin-wildcard dword-design/babel-plugin-wildcard#fork
     depcheck-package-name "^2.0.0"
     find-up "^5.0.0"
     param-case "^3.0.3"
@@ -1278,7 +1278,7 @@
   integrity sha512-pIUXdHeV5G4dKwTcAhJcz8hV3B+IxYUBCpoyeYVhTVjidoJ7zxNnpe7fuLQ+yprdzFHllLlnlhixtVLXZY/cGA==
   dependencies:
     delay "^5.0.0"
-    endent "github:dword-design/endent#fork"
+    endent dword-design/endent#fork
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
@@ -1296,7 +1296,7 @@
     parse-packagejson-name "^1.0.1"
     rollup-plugin-babel "^4.4.0"
     rollup-plugin-terser "^7.0.0"
-    rollup-plugin-vue "github:dword-design/rollup-plugin-vue#fork"
+    rollup-plugin-vue dword-design/rollup-plugin-vue#fork
 
 "@dword-design/tester-plugin-tmp-dir@^2.0.3":
   version "2.1.0"
@@ -1942,9 +1942,8 @@
     lodash.kebabcase "^4.1.1"
     svg-tags "^1.0.0"
 
-"@vue/babel-preset-jsx@github:dword-design/jsx#fork-babel-preset-jsx":
+"@vue/babel-preset-jsx@dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -1963,7 +1962,6 @@
 
 "@vue/babel-sugar-inject-h@dword-design/jsx#fork-babel-sugar-inject-h":
   version "1.1.2"
-  uid cc36a2200c059120f37944615fb2ec0e22f8f3cc
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/cc36a2200c059120f37944615fb2ec0e22f8f3cc"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
@@ -2055,7 +2053,6 @@
 
 "@vue/component-compiler@dword-design/vue-component-compiler#fork":
   version "4.2.3"
-  uid f428eec2731f86664bcd40723ba61a333fd9e8d2
   resolved "https://codeload.github.com/dword-design/vue-component-compiler/tar.gz/f428eec2731f86664bcd40723ba61a333fd9e8d2"
   dependencies:
     "@vue/component-compiler-utils" "^3.0.0"
@@ -2541,9 +2538,8 @@ babel-plugin-transform-imports@^2.0.0:
     "@babel/types" "^7.4"
     is-valid-path "^0.1.1"
 
-"babel-plugin-wildcard@github:dword-design/babel-plugin-wildcard#fork":
+babel-plugin-wildcard@dword-design/babel-plugin-wildcard#fork:
   version "6.0.0"
-  uid "691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   resolved "https://codeload.github.com/dword-design/babel-plugin-wildcard/tar.gz/691d11923ee2dcf63e86f205b0a2c998883e3a3c"
   dependencies:
     rimraf "^2.6.2"
@@ -3579,7 +3575,6 @@ decode-uri-component@^0.2.0:
 
 dedent@0.7.0, dedent@dword-design/dedent#fork:
   version "0.7.0"
-  uid c8d46e5017d60504657c2d01b59082c0329a12a7
   resolved "https://codeload.github.com/dword-design/dedent/tar.gz/c8d46e5017d60504657c2d01b59082c0329a12a7"
   dependencies:
     babel-plugin-add-module-exports "^1.0.2"
@@ -3914,9 +3909,8 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
-"endent@github:dword-design/endent#fork":
+endent@dword-design/endent#fork:
   version "1.4.0"
-  uid be5433db67eaec07c6c9d00ba3bed2ed946dc664
   resolved "https://codeload.github.com/dword-design/endent/tar.gz/be5433db67eaec07c6c9d00ba3bed2ed946dc664"
   dependencies:
     dedent dword-design/dedent#fork
@@ -8428,7 +8422,6 @@ postcss-modules-scope@^3.0.0:
 
 postcss-modules-sync@dword-design/postcss-modules-sync#fork:
   version "1.0.0"
-  uid fe138e704dbbe9b37c395854cc74b364760f1a51
   resolved "https://codeload.github.com/dword-design/postcss-modules-sync/tar.gz/fe138e704dbbe9b37c395854cc74b364760f1a51"
   dependencies:
     generic-names "^1.0.2"
@@ -9276,9 +9269,8 @@ rollup-plugin-terser@^7.0.0:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-"rollup-plugin-vue@github:dword-design/rollup-plugin-vue#fork":
+rollup-plugin-vue@dword-design/rollup-plugin-vue#fork:
   version "5.1.9"
-  uid cd6e2f19d2be7e4363532e00119c904696c0af7c
   resolved "https://codeload.github.com/dword-design/rollup-plugin-vue/tar.gz/cd6e2f19d2be7e4363532e00119c904696c0af7c"
   dependencies:
     "@vue/component-compiler" dword-design/vue-component-compiler#fork
@@ -9867,6 +9859,13 @@ stdout-stream@^1.4.0:
   integrity sha512-j4emi03KXqJWcIeF8eIXkjMFN1Cmb8gUlDYGeBALLPo5qdyTfA9bOtl8m33lRoC+vFMkP3gl0WsDr6+gzxbbTA==
   dependencies:
     readable-stream "^2.0.1"
+
+stealthy-require-no-leak@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stealthy-require-no-leak/-/stealthy-require-no-leak-1.0.3.tgz#04e29d6f895352e6b66e7079d50f8a44a66973d9"
+  integrity sha512-SPS1IB2UyjAfrYgFWfUIR1ipOGRkTjqH7YrygOn/ZQ2o4DzzUuYFAt/Srt2+GtI6hOvMrOF7Q5kGuOX+YibYZg==
+  dependencies:
+    stealthy-require "^1.1.1"
 
 stealthy-require@^1.1.1:
   version "1.1.1"
