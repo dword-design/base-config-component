@@ -5,7 +5,7 @@ import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
 import execa from 'execa'
 import fileUrl from 'file-url'
-import { outputFile } from 'fs-extra'
+import { mkdir, outputFile, remove } from 'fs-extra'
 import { Builder, Nuxt } from 'nuxt'
 import outputFiles from 'output-files'
 
@@ -15,15 +15,15 @@ export default tester(
       await outputFiles({
         'pages/index.vue': endent`
           <template>
-            <my-component class="my-component" />
+            <tmp-component class="tmp-component" />
           </template>
 
           <script>
-          import MyComponent from '../../my-component'
+          import TmpComponent from '../../tmp-component'
 
           export default {
             components: {
-              MyComponent,
+              TmpComponent,
             },
           }
           </script>
@@ -40,7 +40,7 @@ export default tester(
       try {
         await page.goto('http://localhost:3000')
 
-        const component = await page.waitForSelector('.my-component')
+        const component = await page.waitForSelector('.tmp-component')
         expect(await component.evaluate(el => el.innerText)).toEqual(
           'Hello world'
         )
@@ -53,12 +53,12 @@ export default tester(
       await outputFiles({
         'pages/index.vue': endent`
           <template>
-            <my-component class="my-component" />
+            <tmp-component class="tmp-component" />
           </template>
         `,
         'plugins/plugin.js': endent`
           import Vue from 'vue'
-          import MyComponent from '../../my-component'
+          import MyComponent from '../../tmp-component'
           
           Vue.use(MyComponent)
         `,
@@ -74,7 +74,7 @@ export default tester(
       try {
         await page.goto('http://localhost:3000')
 
-        const component = await page.waitForSelector('.my-component')
+        const component = await page.waitForSelector('.tmp-component')
         expect(await component.evaluate(el => el.innerText)).toEqual(
           'Hello world'
         )
@@ -89,10 +89,10 @@ export default tester(
         endent`
         <body>
           <script src="https://unpkg.com/vue"></script>
-          <script src="../my-component/dist/index.min.js"></script>
+          <script src="../tmp-component/dist/index.min.js"></script>
         
           <div id="app">
-            <my-component class="my-component" />
+            <tmp-component class="tmp-component" />
           </div>
         
           <script>
@@ -108,7 +108,7 @@ export default tester(
       try {
         await page.goto(fileUrl('index.html'))
 
-        const component = await page.waitForSelector('.my-component')
+        const component = await page.waitForSelector('.tmp-component')
         expect(await component.evaluate(el => el.innerText)).toEqual(
           'Hello world'
         )
@@ -119,15 +119,16 @@ export default tester(
   },
   [
     {
-      transform: test => async () => {
-        await outputFiles({
-          app: test.appFiles,
-          'my-component': {
+      after: () => remove('tmp-component'),
+      before: async () => {
+        await mkdir('tmp-component')
+        await chdir('tmp-component', async () => {
+          await outputFiles({
             'node_modules/base-config-self/index.js':
-              "module.exports = require('../../../../src')",
+              "module.exports = require('../../../src')",
             'package.json': JSON.stringify({
               baseConfig: 'self',
-              name: 'my-component',
+              name: 'tmp-component',
             }),
             'src/index.vue': endent`
               <script>
@@ -136,13 +137,10 @@ export default tester(
               }
               </script>
             `,
-          },
-        })
-        await chdir('my-component', async () => {
+          })
           await execa.command('base prepare')
           await execa.command('base prepublishOnly')
         })
-        await chdir('app', test)
       },
     },
     testerPluginTmpDir(),
