@@ -15,7 +15,7 @@ export default tester(
       await outputFiles({
         'pages/index.vue': endent`
           <template>
-            <tmp-component class="tmp-component" />
+            <tmp-component />
           </template>
 
           <script>
@@ -53,14 +53,14 @@ export default tester(
       await outputFiles({
         'pages/index.vue': endent`
           <template>
-            <tmp-component class="tmp-component" />
+            <tmp-component />
           </template>
         `,
         'plugins/plugin.js': endent`
           import Vue from 'vue'
-          import MyComponent from '../../tmp-component'
+          import TmpComponent from '../../tmp-component'
           
-          Vue.use(MyComponent)
+          Vue.use(TmpComponent)
         `,
       })
 
@@ -91,12 +91,13 @@ export default tester(
           <script src="https://unpkg.com/vue"></script>
           <script src="../tmp-component/dist/index.min.js"></script>
         
-          <div id="app">
-            <tmp-component class="tmp-component" />
-          </div>
+          <div id="app"></div>
         
           <script>
-            new Vue({ el: '#app' })
+            new Vue({
+              el: '#app',
+              template: '<tmp-component />',
+            })
           </script>
         </body>
       `
@@ -133,7 +134,7 @@ export default tester(
             'src/index.vue': endent`
               <script>
               export default {
-                render: () => <div>Hello world</div>
+                render: () => <div class="tmp-component">Hello world</div>
               }
               </script>
             `,
