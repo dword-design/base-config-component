@@ -1,3 +1,10 @@
+## [1.1.29](https://github.com/dword-design/base-config-component/compare/v1.1.28...v1.1.29) (2021-06-27)
+
+
+### Bug Fixes
+
+* disable job matrix ([#50](https://github.com/dword-design/base-config-component/issues/50)) ([564d2b9](https://github.com/dword-design/base-config-component/commit/564d2b90b313d0f75e6c7cb2f2969d4d6e5d9a28))
+
 ## [1.1.28](https://github.com/dword-design/base-config-component/compare/v1.1.27...v1.1.28) (2021-06-27)
 
 
