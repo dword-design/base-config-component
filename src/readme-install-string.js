@@ -5,7 +5,8 @@ import componentName from './component-name'
 import packageName from './package-name'
 
 export default endent`
-  ## Install Via a Package Manager
+  ## Install via a package manager
+
   \`\`\`bash
   # npm
   $ npm install ${packageName}
@@ -28,7 +29,7 @@ export default endent`
   </script>
   \`\`\`
 
-  Or register as global component:
+  Or register as a global component:
 
   \`\`\`js
   import Vue from 'vue'
@@ -37,7 +38,7 @@ export default endent`
   Vue.component('${componentName}', ${componentName})
   \`\`\`
 
-  Or register as plugin:
+  Or register as a plugin:
 
   \`\`\`js
   import Vue from 'vue'
