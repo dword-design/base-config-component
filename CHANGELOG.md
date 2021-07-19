@@ -1,3 +1,10 @@
+## [1.1.31](https://github.com/dword-design/base-config-component/compare/v1.1.30...v1.1.31) (2021-07-19)
+
+
+### Bug Fixes
+
+* fix readme install string ([42af31d](https://github.com/dword-design/base-config-component/commit/42af31db39f78634e4faf2a3ad2ab73380daf69c))
+
 ## [1.1.30](https://github.com/dword-design/base-config-component/compare/v1.1.29...v1.1.30) (2021-07-06)
 
 
