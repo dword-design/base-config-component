@@ -1,3 +1,10 @@
+## [1.1.33](https://github.com/dword-design/base-config-component/compare/v1.1.32...v1.1.33) (2021-08-18)
+
+
+### Bug Fixes
+
+* fix spelling ([f5314db](https://github.com/dword-design/base-config-component/commit/f5314db87506ea95c3599fec73e2f1693e1643eb))
+
 ## [1.1.32](https://github.com/dword-design/base-config-component/compare/v1.1.31...v1.1.32) (2021-07-20)
 
 
