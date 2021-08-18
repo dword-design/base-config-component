@@ -47,7 +47,7 @@ export default endent`
   Vue.use(${componentName})
   \`\`\`
 
-  ## Install Via CDN
+  ## Install via CDN
 
   \`\`\`html
   ${

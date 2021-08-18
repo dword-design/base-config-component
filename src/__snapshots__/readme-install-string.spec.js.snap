@@ -43,7 +43,7 @@ import FooBar from 'foo-bar'
 Vue.use(FooBar)
 \`\`\`
 
-## Install Via CDN
+## Install via CDN
 
 \`\`\`html
 <script src=\\"https://unpkg.com/vue\\"></script>
@@ -95,7 +95,7 @@ import FooBar from 'foo-bar'
 Vue.use(FooBar)
 \`\`\`
 
-## Install Via CDN
+## Install via CDN
 
 \`\`\`html
 <script src=\\"https://unpkg.com/vue\\"></script>
