@@ -1,61 +1,64 @@
 import { endent, join } from '@dword-design/functions'
 
-import baseConfig from './base-config'
 import componentName from './component-name'
 import packageName from './package-name'
 
-export default endent`
-  ## Install via a package manager
+export default config => {
+  config = { cdnExtraScripts: [], ...config }
 
-  \`\`\`bash
-  # npm
-  $ npm install ${packageName}
+  return endent`
+    ## Install via a package manager
 
-  # Yarn
-  $ yarn add ${packageName}
-  \`\`\`
+    \`\`\`bash
+    # npm
+    $ npm install ${packageName}
 
-  Add to local components:
+    # Yarn
+    $ yarn add ${packageName}
+    \`\`\`
 
-  \`\`\`js
-  <script>
-  import ${componentName} from '${packageName}'
+    Add to local components:
 
-  export default {
-    components: {
-      ${componentName},
-    },
-  }
-  </script>
-  \`\`\`
+    \`\`\`js
+    <script>
+    import ${componentName} from '${packageName}'
 
-  Or register as a global component:
+    export default {
+      components: {
+        ${componentName},
+      },
+    }
+    </script>
+    \`\`\`
 
-  \`\`\`js
-  import Vue from 'vue'
-  import ${componentName} from '${packageName}'
+    Or register as a global component:
 
-  Vue.component('${componentName}', ${componentName})
-  \`\`\`
+    \`\`\`js
+    import Vue from 'vue'
+    import ${componentName} from '${packageName}'
 
-  Or register as a plugin:
+    Vue.component('${componentName}', ${componentName})
+    \`\`\`
 
-  \`\`\`js
-  import Vue from 'vue'
-  import ${componentName} from '${packageName}'
+    Or register as a plugin:
 
-  Vue.use(${componentName})
-  \`\`\`
+    \`\`\`js
+    import Vue from 'vue'
+    import ${componentName} from '${packageName}'
 
-  ## Install via CDN
+    Vue.use(${componentName})
+    \`\`\`
 
-  \`\`\`html
-  ${
-    [
-      '<script src="https://unpkg.com/vue"></script>',
-      ...baseConfig.cdnExtraScripts,
-      `<script src="https://unpkg.com/${packageName}"></script>`,
-    ] |> join('\n')
-  }
-  \`\`\`
-`
+    ## Install via CDN
+
+    \`\`\`html
+    ${
+      [
+        '<script src="https://unpkg.com/vue"></script>',
+        ...config.cdnExtraScripts,
+        `<script src="https://unpkg.com/${packageName}"></script>`,
+      ] |> join('\n')
+    }
+    \`\`\`
+  `
+}

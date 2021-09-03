@@ -9,7 +9,7 @@ import P from 'path'
 import entry from './entry'
 import readmeInstallString from './readme-install-string'
 
-export default {
+export default config => ({
   allowedMatches: ['src'],
   commands: {
     prepublishOnly: async () => {
@@ -58,5 +58,5 @@ export default {
 
       `
     ),
-  readmeInstallString,
-}
+  readmeInstallString: readmeInstallString(config),
+})
