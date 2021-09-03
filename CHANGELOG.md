@@ -1,3 +1,10 @@
+## [1.1.34](https://github.com/dword-design/base-config-component/compare/v1.1.33...v1.1.34) (2021-09-03)
+
+
+### Bug Fixes
+
+* fix cdnExtraScripts ([6d0a9b6](https://github.com/dword-design/base-config-component/commit/6d0a9b6685d5fa36fab86778248f314ff12cb38b))
+
 ## [1.1.33](https://github.com/dword-design/base-config-component/compare/v1.1.32...v1.1.33) (2021-08-18)
 
 
