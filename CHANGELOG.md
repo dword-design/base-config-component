@@ -1,3 +1,10 @@
+## [1.1.35](https://github.com/dword-design/base-config-component/compare/v1.1.34...v1.1.35) (2021-09-06)
+
+
+### Bug Fixes
+
+* remove base-config.js ([ccd5d1f](https://github.com/dword-design/base-config-component/commit/ccd5d1f4e024d8317201c7ff2f2c568f76ca1fb5))
+
 ## [1.1.34](https://github.com/dword-design/base-config-component/compare/v1.1.33...v1.1.34) (2021-09-03)
 
 
