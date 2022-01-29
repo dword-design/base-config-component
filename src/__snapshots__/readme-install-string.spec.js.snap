@@ -13,7 +13,7 @@ $ yarn add foo-bar
 
 Add to local components:
 
-\`\`\`js
+\`\`\`html
 <script>
 import FooBar from 'foo-bar'
 
@@ -65,7 +65,7 @@ $ yarn add foo-bar
 
 Add to local components:
 
-\`\`\`js
+\`\`\`html
 <script>
 import FooBar from 'foo-bar'
 

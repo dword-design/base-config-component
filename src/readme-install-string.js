@@ -19,7 +19,7 @@ export default config => {
 
     Add to local components:
 
-    \`\`\`js
+    \`\`\`html
     <script>
     import ${componentName} from '${packageName}'
 
