@@ -1,3 +1,10 @@
+## [1.1.36](https://github.com/dword-design/base-config-component/compare/v1.1.35...v1.1.36) (2022-01-29)
+
+
+### Bug Fixes
+
+* foo ([9119eb8](https://github.com/dword-design/base-config-component/commit/9119eb8c6716afaa0aab70dcb1400bc2e4daff6d))
+
 ## [1.1.35](https://github.com/dword-design/base-config-component/compare/v1.1.34...v1.1.35) (2021-09-06)
 
 
