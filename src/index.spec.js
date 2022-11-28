@@ -1,15 +1,16 @@
+import { Base } from '@dword-design/base'
 import chdir from '@dword-design/chdir'
 import { endent } from '@dword-design/functions'
 import puppeteer from '@dword-design/puppeteer'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
-import execa from 'execa'
 import fileUrl from 'file-url'
-import { mkdir, outputFile, remove } from 'fs-extra'
+import fs from 'fs-extra'
 import { Builder, Nuxt } from 'nuxt'
 import outputFiles from 'output-files'
 
-import { vueCdnScript } from './variables'
+import self from './index.js'
+import { vueCdnScript } from './variables.js'
 
 export default tester(
   {
@@ -86,7 +87,7 @@ export default tester(
       }
     },
     script: async () => {
-      await outputFile(
+      await fs.outputFile(
         'index.html',
         endent`
         <body>
@@ -122,9 +123,9 @@ export default tester(
   },
   [
     {
-      after: () => remove('tmp-component'),
+      after: () => fs.remove('tmp-component'),
       before: async () => {
-        await mkdir('tmp-component')
+        await fs.mkdir('tmp-component')
         await chdir('tmp-component', async () => {
           await outputFiles({
             'node_modules/base-config-self/index.js':
@@ -141,8 +142,8 @@ export default tester(
               </script>
             `,
           })
-          await execa.command('base prepare')
-          await execa.command('base prepublishOnly')
+          await new Base(self).prepare()
+          await self().commands.prepublishOnly()
         })
       },
     },

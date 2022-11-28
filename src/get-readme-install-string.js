@@ -1,11 +1,15 @@
 import { endent, join } from '@dword-design/functions'
 
-import componentName from './component-name'
-import packageName from './package-name'
-import { vueCdnScript } from './variables'
+import getComponentName from './get-component-name.js'
+import getPackageName from './get-package-name.js'
+import { vueCdnScript } from './variables.js'
 
-export default config => {
-  config = { cdnExtraScripts: [], ...config }
+export default (config = {}) => {
+  config.cdnExtraScripts = config.cdnExtraScripts || []
+
+  const packageName = getPackageName()
+
+  const componentName = getComponentName(config)
 
   return endent`
     ## Install via a package manager
