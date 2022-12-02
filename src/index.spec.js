@@ -143,7 +143,7 @@ export default tester(
             `,
           })
           await new Base(self).prepare()
-          await self().commands.prepublishOnly()
+          await self().commands.prepublishOnly({ log: false })
         })
       },
     },

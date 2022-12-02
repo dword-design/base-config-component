@@ -15,7 +15,8 @@ const _require = createRequire(import.meta.url)
 export default config => ({
   allowedMatches: ['src'],
   commands: {
-    prepublishOnly: async () => {
+    prepublishOnly: async (options = {}) => {
+      options = { log: true, ...options }
       try {
         await fs.outputFile(P.join('src', 'entry.js'), getEntry())
         await fs.remove('dist')
@@ -29,7 +30,7 @@ export default config => ({
           ],
           {
             env: { NODE_ENV: 'production' },
-            stdio: 'inherit',
+            ...(options.log ? { stdio: 'inherit' } : {}),
           }
         )
       } finally {
