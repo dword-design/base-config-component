@@ -65,4 +65,5 @@ export default config => ({
       `
     ),
   readmeInstallString: getReadmeInstallString(config),
+  supportedNodeVersions: [14, 16],
 })
