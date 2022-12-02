@@ -2,33 +2,39 @@ import depcheckParserSass from '@dword-design/depcheck-parser-sass'
 import { endent } from '@dword-design/functions'
 import packageName from 'depcheck-package-name'
 import depcheckParserVue from 'depcheck-parser-vue'
-import execa from 'execa'
-import { outputFile, remove } from 'fs-extra'
+import { execa } from 'execa'
+import fs from 'fs-extra'
+import { createRequire } from 'module'
 import P from 'path'
 
-import entry from './entry'
-import readmeInstallString from './readme-install-string'
+import getEntry from './get-entry.js'
+import getReadmeInstallString from './get-readme-install-string.js'
+
+const _require = createRequire(import.meta.url)
 
 export default config => ({
   allowedMatches: ['src'],
   commands: {
-    prepublishOnly: async () => {
+    prepublishOnly: async (options = {}) => {
+      options = { log: true, ...options }
       try {
-        await outputFile(P.join('src', 'entry.js'), entry)
-        await remove('dist')
+        await fs.outputFile(P.join('src', 'entry.js'), getEntry())
+        await fs.remove('dist')
         await execa(
           packageName`rollup`,
           [
             '--config',
-            require.resolve('@dword-design/rollup-config-component'),
+            _require.resolve(
+              packageName`@dword-design/rollup-config-component`
+            ),
           ],
           {
             env: { NODE_ENV: 'production' },
-            stdio: 'inherit',
+            ...(options.log ? { stdio: 'inherit' } : {}),
           }
         )
       } finally {
-        await remove(P.join('src', 'entry.js'))
+        await fs.remove(P.join('src', 'entry.js'))
       }
     },
   },
@@ -49,7 +55,7 @@ export default config => ({
     unpkg: 'dist/index.min.js',
   },
   prepare: () =>
-    outputFile(
+    fs.outputFile(
       '.browserslistrc',
       endent`
         current node
@@ -58,5 +64,6 @@ export default config => ({
 
       `
     ),
-  readmeInstallString: readmeInstallString(config),
+  readmeInstallString: getReadmeInstallString(config),
+  supportedNodeVersions: [14, 16],
 })
