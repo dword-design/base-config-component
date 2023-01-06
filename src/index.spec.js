@@ -8,6 +8,7 @@ import fileUrl from 'file-url'
 import fs from 'fs-extra'
 import { Builder, Nuxt } from 'nuxt'
 import outputFiles from 'output-files'
+import P from 'path'
 
 import self from './index.js'
 import { vueCdnScript } from './variables.js'
@@ -128,10 +129,8 @@ export default tester(
         await fs.mkdir('tmp-component')
         await chdir('tmp-component', async () => {
           await outputFiles({
-            'node_modules/base-config-self/index.js':
-              "module.exports = require('../../../src')",
             'package.json': JSON.stringify({
-              baseConfig: 'self',
+              baseConfig: P.resolve('..', 'src', 'index.js'),
               name: 'tmp-component',
             }),
             'src/index.vue': endent`
