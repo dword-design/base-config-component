@@ -7,12 +7,12 @@ export default config => {
 
   return endent`
     // Import vue component
-    import component from './index.vue';
+    import component from './index.vue'
 
-    const install = function installVueIcon(Vue) {
-      if (install.installed) return;
-      install.installed = true;
-      Vue.component('${componentName}', component);
+    const install = app => {
+      if (install.installed) return
+      install.installed = true
+      app.component('${componentName}', component)
     };
 
     component.install = install
@@ -21,8 +21,8 @@ export default config => {
       window.${componentName} = component
     }
 
-    component.install = install;
+    component.install = install
 
-    export default component;
+    export default component
   `
 }
