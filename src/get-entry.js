@@ -2,8 +2,8 @@ import { endent } from '@dword-design/functions'
 
 import getComponentName from './get-component-name.js'
 
-export default config => {
-  const componentName = getComponentName(config)
+export default () => {
+  const componentName = getComponentName()
 
   return endent`
     // Import vue component
