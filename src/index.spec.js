@@ -21,6 +21,7 @@ export default tester(
   {
     component: async () => {
       await outputFiles({
+        'package.json': JSON.stringify({ type: 'module' }),
         'pages/index.vue': endent`
           <template>
             <tmp-component />
@@ -65,6 +66,7 @@ export default tester(
     },
     plugin: async () => {
       await outputFiles({
+        'package.json': JSON.stringify({ type: 'module' }),
         'pages/index.vue': endent`
           <template>
             <tmp-component />
