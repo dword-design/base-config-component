@@ -4,10 +4,11 @@ import { endent } from '@dword-design/functions'
 import puppeteer from '@dword-design/puppeteer'
 import tester from '@dword-design/tester'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
+import { loadNuxt } from '@nuxt/kit'
 import { execaCommand } from 'execa'
 import fileUrl from 'file-url'
 import fs from 'fs-extra'
-import { build, loadNuxt } from 'nuxt'
+import { build } from 'nuxt'
 import outputFiles from 'output-files'
 import { pEvent } from 'p-event'
 import P from 'path'
@@ -37,9 +38,7 @@ export default tester(
         `,
       })
 
-      const nuxt = await loadNuxt({
-        overrides: { telemetry: false },
-      })
+      const nuxt = await loadNuxt({ config: { telemetry: false } })
       await build(nuxt)
 
       const childProcess = execaCommand('nuxt start', { all: true })
@@ -54,7 +53,11 @@ export default tester(
       const page = await browser.newPage()
       try {
         await page.goto('http://localhost:3000')
-        await page.waitForSelector('#__nuxt')
+
+        const component = await page.waitForSelector('.tmp-component')
+        expect(await component.evaluate(el => el.innerText)).toEqual(
+          'Hello world'
+        )
       } finally {
         await browser.close()
         await kill(childProcess.pid)
@@ -74,7 +77,7 @@ export default tester(
         `,
       })
 
-      const nuxt = await loadNuxt({ overrides: { telemetry: false } })
+      const nuxt = await loadNuxt({ config: { telemetry: false } })
       await build(nuxt)
 
       const childProcess = execaCommand('nuxt start', { all: true })
@@ -89,7 +92,11 @@ export default tester(
       const page = await browser.newPage()
       try {
         await page.goto('http://localhost:3000')
-        await page.waitForSelector('#__nuxt')
+
+        const component = await page.waitForSelector('.tmp-component')
+        expect(await component.evaluate(el => el.innerText)).toEqual(
+          'Hello world'
+        )
       } finally {
         await browser.close()
         await kill(childProcess.pid)
