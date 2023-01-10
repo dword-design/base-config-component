@@ -38,8 +38,8 @@ export default tester(
         `,
       })
       await fs.ensureDir('node_modules')
-      await fs.symlink(
-        P.join('..', '..', 'tmp-component'),
+      await fs.copy(
+        P.join('..', 'tmp-component'),
         P.join('node_modules', 'tmp-component')
       )
 
@@ -82,8 +82,8 @@ export default tester(
         `,
       })
       await fs.ensureDir('node_modules')
-      await fs.symlink(
-        P.join('..', '..', 'tmp-component'),
+      await fs.copy(
+        P.join('..', 'tmp-component'),
         P.join('node_modules', 'tmp-component')
       )
 
