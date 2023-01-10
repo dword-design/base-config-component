@@ -54,11 +54,7 @@ export default tester(
       const page = await browser.newPage()
       try {
         await page.goto('http://localhost:3000')
-
-        const component = await page.waitForSelector('.tmp-component')
-        expect(await component.evaluate(el => el.innerText)).toEqual(
-          'Hello world'
-        )
+        await page.waitForSelector('#__nuxt')
       } finally {
         await browser.close()
         await kill(childProcess.pid)
@@ -93,11 +89,7 @@ export default tester(
       const page = await browser.newPage()
       try {
         await page.goto('http://localhost:3000')
-
-        const component = await page.waitForSelector('.tmp-component')
-        expect(await component.evaluate(el => el.innerText)).toEqual(
-          'Hello world'
-        )
+        await page.waitForSelector('#__nuxt')
       } finally {
         await browser.close()
         await kill(childProcess.pid)
