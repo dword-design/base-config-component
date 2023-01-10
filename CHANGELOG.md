@@ -1,3 +1,18 @@
+# [2.0.0](https://github.com/dword-design/base-config-component/compare/v1.1.39...v2.0.0) (2023-01-10)
+
+
+### Bug Fixes
+
+* trigger release ([b21f03d](https://github.com/dword-design/base-config-component/commit/b21f03d1f6b001f198e1392eb7252a7152a36db2))
+* update dependency @dword-design/chdir to v3 ([#106](https://github.com/dword-design/base-config-component/issues/106)) ([db53965](https://github.com/dword-design/base-config-component/commit/db539650faac27a34cd840824febd5ac531a8861))
+* update dependency tree-kill-promise to v3 ([#110](https://github.com/dword-design/base-config-component/issues/110)) ([b342bd1](https://github.com/dword-design/base-config-component/commit/b342bd13e83e3ed6dc606f02ddb40ba30e2e7f8c))
+* vue 3 ([#104](https://github.com/dword-design/base-config-component/issues/104)) ([f9bcedc](https://github.com/dword-design/base-config-component/commit/f9bcedc3a9112492657da0a0098d9304f6a35598))
+
+
+### BREAKING CHANGES
+
+* Vue 3
+
 ## [1.1.39](https://github.com/dword-design/base-config-component/compare/v1.1.38...v1.1.39) (2022-12-03)
 
 
