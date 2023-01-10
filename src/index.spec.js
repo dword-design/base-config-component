@@ -27,7 +27,7 @@ export default tester(
           </template>
 
           <script>
-          import TmpComponent from '../../tmp-component'
+          import TmpComponent from 'tmp-component'
 
           export default {
             components: {
@@ -37,6 +37,11 @@ export default tester(
           </script>
         `,
       })
+      await fs.ensureDir('node_modules')
+      await fs.symlink(
+        P.join('..', '..', 'tmp-component'),
+        P.join('node_modules', 'tmp-component')
+      )
 
       const nuxt = await loadNuxt({ config: { telemetry: false } })
       await build(nuxt)
@@ -71,11 +76,16 @@ export default tester(
           </template>
         `,
         'plugins/plugin.js': endent`
-          import TmpComponent from '../../tmp-component'
+          import TmpComponent from 'tmp-component'
           
           export default defineNuxtPlugin(nuxtApp => nuxtApp.vueApp.use(TmpComponent))
         `,
       })
+      await fs.ensureDir('node_modules')
+      await fs.symlink(
+        P.join('..', '..', 'tmp-component'),
+        P.join('node_modules', 'tmp-component')
+      )
 
       const nuxt = await loadNuxt({ config: { telemetry: false } })
       await build(nuxt)
