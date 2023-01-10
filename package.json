@@ -43,7 +43,7 @@
     "nuxt": "^3.0.0",
     "output-files": "^2.0.5",
     "p-event": "^5.0.1",
-    "tree-kill-promise": "^2.0.8"
+    "tree-kill-promise": "^3.0.0"
   },
   "engines": {
     "node": ">=14"
