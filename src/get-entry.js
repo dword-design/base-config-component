@@ -21,8 +21,6 @@ export default () => {
       window.${componentName} = component
     }
 
-    component.install = install
-
     export default component
   `
 }
