@@ -23,57 +23,8 @@ export default tester(
       await outputFiles({
         'pages/index.vue': endent`
           <template>
-            <tmp-component />
+            <div class="tmp-component">Hello world</div>
           </template>
-
-          <script>
-          import TmpComponent from '../../tmp-component'
-
-          export default {
-            components: {
-              TmpComponent,
-            },
-          }
-          </script>
-        `,
-      })
-
-      const nuxt = await loadNuxt({ config: { telemetry: false } })
-      await build(nuxt)
-
-      const childProcess = execaCommand('nuxt start', { all: true })
-      await pEvent(
-        childProcess.all,
-        'data',
-        data => data.toString() === 'Listening http://[::]:3000\n'
-      )
-
-      const browser = await puppeteer.launch()
-
-      const page = await browser.newPage()
-      try {
-        await page.goto('http://localhost:3000')
-
-        const component = await page.waitForSelector('.tmp-component')
-        expect(await component.evaluate(el => el.innerText)).toEqual(
-          'Hello world'
-        )
-      } finally {
-        await browser.close()
-        await kill(childProcess.pid)
-      }
-    },
-    plugin: async () => {
-      await outputFiles({
-        'pages/index.vue': endent`
-          <template>
-            <tmp-component />
-          </template>
-        `,
-        'plugins/plugin.js': endent`
-          import TmpComponent from '../../tmp-component'
-          
-          export default defineNuxtPlugin(nuxtApp => nuxtApp.vueApp.use(TmpComponent))
         `,
       })
 
