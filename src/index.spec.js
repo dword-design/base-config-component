@@ -148,6 +148,7 @@ export default tester(
             'package.json': JSON.stringify({
               baseConfig: P.resolve('..', 'src', 'index.js'),
               name: 'tmp-component',
+              type: 'module',
             }),
             'src/index.vue': endent`
               <template>
