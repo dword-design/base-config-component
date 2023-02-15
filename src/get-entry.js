@@ -6,7 +6,6 @@ export default () => {
   const componentName = getComponentName()
 
   return endent`
-    // Import vue component
     import component from './index.vue'
 
     const install = app => {
