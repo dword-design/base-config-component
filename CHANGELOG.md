@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/dword-design/base-config-component/compare/v2.0.4...v2.0.5) (2023-02-15)
+
+
+### Bug Fixes
+
+* remove comment ([b286d7b](https://github.com/dword-design/base-config-component/commit/b286d7b86246344c9533e8dd37178c2c0ac69a33))
+
 ## [2.0.4](https://github.com/dword-design/base-config-component/compare/v2.0.3...v2.0.4) (2023-02-15)
 
 
