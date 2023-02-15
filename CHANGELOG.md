@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/dword-design/base-config-component/compare/v2.0.3...v2.0.4) (2023-02-15)
+
+
+### Bug Fixes
+
+* fix readme string ([1603c21](https://github.com/dword-design/base-config-component/commit/1603c2169d889a2703478c17d8f14f3f01d235e3))
+
 ## [2.0.3](https://github.com/dword-design/base-config-component/compare/v2.0.2...v2.0.3) (2023-02-15)
 
 
