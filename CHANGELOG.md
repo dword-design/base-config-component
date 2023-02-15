@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/dword-design/base-config-component/compare/v2.0.1...v2.0.2) (2023-02-15)
+
+
+### Bug Fixes
+
+* remove coverageFileExtensions ([6bbf78c](https://github.com/dword-design/base-config-component/commit/6bbf78cbb37d9c3ff8670c2d16a7ac11782562bb))
+
 ## [2.0.1](https://github.com/dword-design/base-config-component/compare/v2.0.0...v2.0.1) (2023-01-10)
 
 
