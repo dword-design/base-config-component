@@ -39,19 +39,17 @@ export default (config = {}) => {
     Or register as a global component:
 
     \`\`\`js
-    import Vue from 'vue'
     import ${componentName} from '${packageName}'
 
-    Vue.component('${componentName}', ${componentName})
+    app.component('${componentName}', ${componentName})
     \`\`\`
 
     Or register as a plugin:
 
     \`\`\`js
-    import Vue from 'vue'
     import ${componentName} from '${packageName}'
 
-    Vue.use(${componentName})
+    app.use(${componentName})
     \`\`\`
 
     ## Install via CDN
