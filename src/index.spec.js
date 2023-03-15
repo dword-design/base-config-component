@@ -46,7 +46,7 @@ export default tester(
       await pEvent(
         childProcess.all,
         'data',
-        data => data.toString() === 'Listening http://[::]:3000\n'
+        data => data.toString() === 'Listening http://[::]:3000\n',
       )
 
       const browser = await puppeteer.launch()
@@ -57,7 +57,7 @@ export default tester(
 
         const component = await page.waitForSelector('.tmp-component')
         expect(await component.evaluate(el => el.innerText)).toEqual(
-          'Hello world'
+          'Hello world',
         )
       } finally {
         await browser.close()
@@ -74,7 +74,7 @@ export default tester(
         `,
         'plugins/plugin.js': endent`
           import TmpComponent from '../../tmp-component'
-          
+
           export default defineNuxtPlugin(nuxtApp => nuxtApp.vueApp.use(TmpComponent))
         `,
       })
@@ -86,7 +86,7 @@ export default tester(
       await pEvent(
         childProcess.all,
         'data',
-        data => data.toString() === 'Listening http://[::]:3000\n'
+        data => data.toString() === 'Listening http://[::]:3000\n',
       )
 
       const browser = await puppeteer.launch()
@@ -97,7 +97,7 @@ export default tester(
 
         const component = await page.waitForSelector('.tmp-component')
         expect(await component.evaluate(el => el.innerText)).toEqual(
-          'Hello world'
+          'Hello world',
         )
       } finally {
         await browser.close()
@@ -108,21 +108,21 @@ export default tester(
       await fs.outputFile(
         'index.html',
         endent`
-        <body>
-          ${vueCdnScript}
-          <script src="../tmp-component/dist/index.min.js"></script>
-        
-          <div id="app"></div>
-        
-          <script>
-            const app = Vue.createApp({
-              template: '<tmp-component />',
-            })
-            app.component('TmpComponent', TmpComponent)
-            app.mount('#app')
-          </script>
-        </body>
-      `
+          <body>
+            ${vueCdnScript}
+            <script src="../tmp-component/dist/index.min.js"></script>
+
+            <div id="app"></div>
+
+            <script>
+              const app = Vue.createApp({
+                template: '<tmp-component />',
+              })
+              app.component('TmpComponent', TmpComponent)
+              app.mount('#app')
+            </script>
+          </body>
+        `,
       )
 
       const browser = await puppeteer.launch()
@@ -133,7 +133,7 @@ export default tester(
 
         const component = await page.waitForSelector('.tmp-component')
         expect(await component.evaluate(el => el.innerText)).toEqual(
-          'Hello world'
+          'Hello world',
         )
       } finally {
         await browser.close()
@@ -164,5 +164,5 @@ export default tester(
       },
     },
     testerPluginTmpDir(),
-  ]
+  ],
 )
