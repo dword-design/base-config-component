@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/dword-design/base-config-component/compare/v2.0.11...v2.0.12) (2023-03-17)
+
+
+### Bug Fixes
+
+* update dependency tree-kill-promise to v3.0.5 ([7c585cb](https://github.com/dword-design/base-config-component/commit/7c585cb434f2aa84a73fc17a76010d949355e702))
+
 ## [2.0.11](https://github.com/dword-design/base-config-component/compare/v2.0.10...v2.0.11) (2023-03-16)
 
 
