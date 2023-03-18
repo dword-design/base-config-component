@@ -1,3 +1,11 @@
+## [2.0.13](https://github.com/dword-design/base-config-component/compare/v2.0.12...v2.0.13) (2023-03-18)
+
+
+### Bug Fixes
+
+* update dependency output-files to v2.0.14 ([bcfa36f](https://github.com/dword-design/base-config-component/commit/bcfa36fca21a1bfd23a0c2c6ac38f5f4974bfd72))
+* update dependency output-files to v2.0.15 ([8c0e68a](https://github.com/dword-design/base-config-component/commit/8c0e68a478816c5bd919fb55c831997b93d6e36e))
+
 ## [2.0.12](https://github.com/dword-design/base-config-component/compare/v2.0.11...v2.0.12) (2023-03-17)
 
 
