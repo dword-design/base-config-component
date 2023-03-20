@@ -4080,9 +4080,9 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001426:
   integrity sha512-lQ1VlUUq5q9ro9X+5gOEyH7i3vm+AYVT1WDCVB69XOZ17KZRhnZ9J0Sqz7wTHQaLBJccNCHq8/Ww5LlOIZbB0w==
 
 caniuse-lite@^1.0.30001449:
-  version "1.0.30001466"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001466.tgz#c1e6197c540392e09709ecaa9e3e403428c53375"
-  integrity sha512-ewtFBSfWjEmxUgNBSZItFSmVtvk9zkwkl1OfRZlKA8slltRN+/C/tuGVrF9styXkN36Yu3+SeJ1qkXxDEyNZ5w==
+  version "1.0.30001468"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001468.tgz#0101837c6a4e38e6331104c33dcfb3bdf367a4b7"
+  integrity sha512-zgAo8D5kbOyUcRAgSmgyuvBkjrGk5CGYG5TYgFdpQv+ywcyEpo1LOWoG8YmoflGnh+V+UsNuKYedsoYs0hzV5A==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -5049,9 +5049,9 @@ depcheck-parser-babel@^3.0.1:
     fs-extra "^10.0.0"
 
 depcheck-parser-vue@^3.0.0:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/depcheck-parser-vue/-/depcheck-parser-vue-3.0.2.tgz#d68389a75d1465d94373d597cffdf544f2b8183d"
-  integrity sha512-m0rcs5hlnxMkrYiSqYfFUrvHS83Tq8HaesdH7EOs/7V33nza5OFkKqLm76LsdxDIV1oYygBa8Yjhrd0qHDsQsQ==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/depcheck-parser-vue/-/depcheck-parser-vue-3.0.3.tgz#3fb47c8e3aa1b972b70a1c93c4fe38cda3177b05"
+  integrity sha512-eE9Gb4bLVBeBVZgWse1NqrwzhhmKWA4cJ/BbtK7f5QHYEEO54/5IWO6Vn65Y4xPOk4Ol6DwIGsBk/1oAWyV2rA==
   dependencies:
     "@babel/core" "^7.10.3"
     "@dword-design/functions" "^4.0.0"
@@ -5313,9 +5313,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.331"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.331.tgz#c8ea823968563ef2cbb3495233e9e16c48c54a4a"
-  integrity sha512-tdtr9y9oJl8VDiS+HeB6e/JDJqdDGjIk3yRfEMHm5rDnWQ/D5SbafybAayInxolbfbH6pouV5g7ZUAwE/WVtHw==
+  version "1.4.333"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.333.tgz#ebb21f860f8a29923717b06ec0cb54e77ed34c04"
+  integrity sha512-YyE8+GKyGtPEP1/kpvqsdhD6rA/TP1DUFDN4uiU/YI52NzDxmwHkEb3qjId8hLBa5siJvG0sfC3O66501jMruQ==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
