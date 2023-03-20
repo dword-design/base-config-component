@@ -1,3 +1,11 @@
+## [2.0.21](https://github.com/dword-design/base-config-component/compare/v2.0.20...v2.0.21) (2023-03-20)
+
+
+### Bug Fixes
+
+* update dependency fs-extra to v11.1.1 ([ec8aa20](https://github.com/dword-design/base-config-component/commit/ec8aa20931dce6da59de6bce9d17c19dddb44b54))
+* update dependency tree-kill-promise to v3.0.8 ([7cca398](https://github.com/dword-design/base-config-component/commit/7cca3984edf5de0183f76d9a7b4000e40fdf8e6f))
+
 ## [2.0.20](https://github.com/dword-design/base-config-component/compare/v2.0.19...v2.0.20) (2023-03-19)
 
 
