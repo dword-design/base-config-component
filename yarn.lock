@@ -5049,9 +5049,9 @@ depcheck-parser-babel@^3.0.1:
     fs-extra "^10.0.0"
 
 depcheck-parser-vue@^3.0.0:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/depcheck-parser-vue/-/depcheck-parser-vue-3.0.3.tgz#3fb47c8e3aa1b972b70a1c93c4fe38cda3177b05"
-  integrity sha512-eE9Gb4bLVBeBVZgWse1NqrwzhhmKWA4cJ/BbtK7f5QHYEEO54/5IWO6Vn65Y4xPOk4Ol6DwIGsBk/1oAWyV2rA==
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/depcheck-parser-vue/-/depcheck-parser-vue-3.0.4.tgz#475ca2376dcb7e992147869b90e4efec57b365c3"
+  integrity sha512-Bpf+o6K3xQDMlg0DdABC+ZhxQvMgYjyVMUadDCCZIRyUMAOFP1L8VZNHFBLp+5uSsqwJPasyUzOs/yM6gfPnoQ==
   dependencies:
     "@babel/core" "^7.10.3"
     "@dword-design/functions" "^4.0.0"
@@ -5313,9 +5313,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.333"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.333.tgz#ebb21f860f8a29923717b06ec0cb54e77ed34c04"
-  integrity sha512-YyE8+GKyGtPEP1/kpvqsdhD6rA/TP1DUFDN4uiU/YI52NzDxmwHkEb3qjId8hLBa5siJvG0sfC3O66501jMruQ==
+  version "1.4.334"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.334.tgz#eacdcb1145534202d569610c5915b63a3fec0eb9"
+  integrity sha512-laZ1odk+TRen6q0GeyQx/JEkpD3iSZT7ewopCpKqg9bTjP1l8XRfU3Bg20CFjNPZkp5+NDBl3iqd4o/kPO+Vew==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
