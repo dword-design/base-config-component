@@ -1,3 +1,11 @@
+## [2.0.22](https://github.com/dword-design/base-config-component/compare/v2.0.21...v2.0.22) (2023-03-21)
+
+
+### Bug Fixes
+
+* update dependency depcheck-parser-vue to v3.0.3 ([3bc1eac](https://github.com/dword-design/base-config-component/commit/3bc1eacc5b0f1817081f54f973c6692b10fbca7c))
+* update dependency tree-kill-promise to v3.0.9 ([0b76eb9](https://github.com/dword-design/base-config-component/commit/0b76eb9f0674bd47dd6cf09335477640c0d2b9b7))
+
 ## [2.0.21](https://github.com/dword-design/base-config-component/compare/v2.0.20...v2.0.21) (2023-03-20)
 
 
