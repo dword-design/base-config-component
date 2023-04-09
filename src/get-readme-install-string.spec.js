@@ -13,7 +13,7 @@ export default tester(
           cdnExtraScripts: [
             '<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>',
           ],
-        })
+        }),
       ).toMatchSnapshot(this)
     },
     async valid() {
@@ -21,5 +21,5 @@ export default tester(
       expect(self()).toMatchSnapshot(this)
     },
   },
-  [testerPluginTmpDir()]
+  [testerPluginTmpDir()],
 )
