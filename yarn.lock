@@ -1330,9 +1330,9 @@
     babel-plugin-add-module-exports "^1.0.2"
 
 "@dword-design/depcheck-parser-sass@^3.0.0", "@dword-design/depcheck-parser-sass@^3.0.1":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@dword-design/depcheck-parser-sass/-/depcheck-parser-sass-3.0.6.tgz#0dfadf02ef1145fd402dbf823d459a3e8408d402"
-  integrity sha512-bc+k991/iU3rxSGE8d/IRXrwIkyB37s7DiTrX9b4S12imRYUNVG59Hwv3cKsgdurZXyivgnPQbeROHzrMBLM+A==
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@dword-design/depcheck-parser-sass/-/depcheck-parser-sass-3.0.7.tgz#c73312ff242b1400c092bc0864eea600c1037307"
+  integrity sha512-+/Hmk0c0Hu1rSCflqXrU3B7tGjVYhpXQr/BdcncimQed1ZIGW08yRgqWM6U0Yr8OzX7wlmgCyJdYqUqvPlu1mA==
   dependencies:
     "@dword-design/functions" "^4.0.0"
     get-package-name "^2.0.0"
@@ -7528,7 +7528,14 @@ is-cidr@*:
   dependencies:
     cidr-regex "4.0.3"
 
-is-core-module@^2.11.0, is-core-module@^2.4.0, is-core-module@^2.5.0, is-core-module@^2.8.1, is-core-module@^2.9.0:
+is-core-module@^2.11.0, is-core-module@^2.5.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.12.0.tgz#36ad62f6f73c8253fd6472517a12483cf03e7ec4"
+  integrity sha512-RECHCBCd/viahWmwj6enj19sKbHfJrddi/6cBDsNTKbNq0f7VeaUkBo60BqzvPqo/W54ChS62Z5qyun7cfOMqQ==
+  dependencies:
+    has "^1.0.3"
+
+is-core-module@^2.4.0, is-core-module@^2.8.1, is-core-module@^2.9.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.11.0.tgz#ad4cb3e3863e814523c96f3f58d26cc570ff0144"
   integrity sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==
