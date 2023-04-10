@@ -1,3 +1,10 @@
+## [2.0.33](https://github.com/dword-design/base-config-component/compare/v2.0.32...v2.0.33) (2023-04-10)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/tester to v2.0.17 ([1fbf955](https://github.com/dword-design/base-config-component/commit/1fbf95583fe2e0f09a00b0e8fdbd7eb62254ac1a))
+
 ## [2.0.32](https://github.com/dword-design/base-config-component/compare/v2.0.31...v2.0.32) (2023-04-10)
 
 
