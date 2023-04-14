@@ -1,3 +1,10 @@
+## [2.0.43](https://github.com/dword-design/base-config-component/compare/v2.0.42...v2.0.43) (2023-04-14)
+
+
+### Bug Fixes
+
+* update dependency nuxt to v3.4.1 ([08c2b32](https://github.com/dword-design/base-config-component/commit/08c2b32da2e602f48cbe2d54c598ab02c9ec012e))
+
 ## [2.0.42](https://github.com/dword-design/base-config-component/compare/v2.0.41...v2.0.42) (2023-04-14)
 
 
