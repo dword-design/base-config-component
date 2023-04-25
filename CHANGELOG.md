@@ -1,3 +1,10 @@
+## [2.0.47](https://github.com/dword-design/base-config-component/compare/v2.0.46...v2.0.47) (2023-04-25)
+
+
+### Bug Fixes
+
+* update dependency @vitejs/plugin-vue to v4.2.0 ([6113aba](https://github.com/dword-design/base-config-component/commit/6113aba6243fd88faf45eb1454c0f346f7145dd7))
+
 ## [2.0.46](https://github.com/dword-design/base-config-component/compare/v2.0.45...v2.0.46) (2023-04-21)
 
 
