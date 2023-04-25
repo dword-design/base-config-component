@@ -1,3 +1,10 @@
+## [2.0.48](https://github.com/dword-design/base-config-component/compare/v2.0.47...v2.0.48) (2023-04-25)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/puppeteer to v6.0.8 ([ed66070](https://github.com/dword-design/base-config-component/commit/ed660703a371cb4f71e06df005192ec62383b0e4))
+
 ## [2.0.47](https://github.com/dword-design/base-config-component/compare/v2.0.46...v2.0.47) (2023-04-25)
 
 
