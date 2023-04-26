@@ -1416,9 +1416,9 @@
     expect-mocha-snapshot "^2.1.5"
 
 "@dword-design/puppeteer@^6.0.0":
-  version "6.0.8"
-  resolved "https://registry.yarnpkg.com/@dword-design/puppeteer/-/puppeteer-6.0.8.tgz#254c5c166918f66baec912c249f93e192b5b94bb"
-  integrity sha512-lRyH9fHgzCxZx5Z9JJpAYeIzO6aIZ5GpGIRpkRbAYb1F8+dQMbj6o9OeOqWFjfBUTMgxqe3KLMHTbkWPtwlrEw==
+  version "6.0.9"
+  resolved "https://registry.yarnpkg.com/@dword-design/puppeteer/-/puppeteer-6.0.9.tgz#31b8aa976935175ef795bb85805857321c3a1b44"
+  integrity sha512-x/qKFjKsDl/KTyH7TgbTYG4katYFklZrFlaZ9ORUP4Gv/f6zAX40OvPrznIj96NLrEUJoaCDjRDikedKteOvSA==
   dependencies:
     puppeteer "^19.4.1"
 
@@ -2557,9 +2557,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "18.16.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.0.tgz#4668bc392bb6938637b47e98b1f2ed5426f33316"
-  integrity sha512-BsAaKhB+7X+H4GnSjGhJG9Qi8Tw+inU9nJDwmD5CgOmBLEI6ArdhikpLX7DjbjDRDTbqZzU2LSQNZg8WGPiSZQ==
+  version "18.16.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.1.tgz#5db121e9c5352925bb1f1b892c4ae620e3526799"
+  integrity sha512-DZxSZWXxFfOlx7k7Rv4LAyiMroaxa3Ly/7OOzZO8cBNho0YzAi4qlbrx8W27JGqG57IgR/6J7r+nOJWw6kcvZA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
