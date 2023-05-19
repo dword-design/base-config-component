@@ -33,6 +33,7 @@ export default config => ({
   },
   editorIgnore: ['dist', '.browserslistrc'],
   gitignore: ['/dist', '.browserslistrc'],
+  nodeVersion: 18,
   npmPublish: true,
   packageConfig: {
     browser: 'dist/index.esm.js',
@@ -51,5 +52,4 @@ export default config => ({
       `,
     ),
   readmeInstallString: getReadmeInstallString(config),
-  nodeVersion: 18,
 })
