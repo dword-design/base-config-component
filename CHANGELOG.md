@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dword-design/base-config-component/compare/v2.0.55...v3.0.0) (2023-05-20)
+
+
+### Bug Fixes
+
+* upgrades ([#184](https://github.com/dword-design/base-config-component/issues/184)) ([bdc0a56](https://github.com/dword-design/base-config-component/commit/bdc0a56e23a31234d37f1340bd287ee9eb2c49f9))
+
+
+### BREAKING CHANGES
+
+* drop node 14
+
 ## [2.0.55](https://github.com/dword-design/base-config-component/compare/v2.0.54...v2.0.55) (2023-05-19)
 
 
