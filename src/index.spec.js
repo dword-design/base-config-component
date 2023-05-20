@@ -3,15 +3,13 @@ import chdir from '@dword-design/chdir'
 import { endent } from '@dword-design/functions'
 import puppeteer from '@dword-design/puppeteer'
 import tester from '@dword-design/tester'
+import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
-import { loadNuxt } from '@nuxt/kit'
 import { execaCommand } from 'execa'
 import fileUrl from 'file-url'
 import fs from 'fs-extra'
-import { build } from 'nuxt'
+import nuxtDevReady from 'nuxt-dev-ready'
 import outputFiles from 'output-files'
-import { pEvent } from 'p-event'
-import P from 'path'
 import kill from 'tree-kill-promise'
 
 import self from './index.js'
@@ -19,10 +17,10 @@ import { vueCdnScript } from './variables.js'
 
 export default tester(
   {
-    component: async () => {
-      await outputFiles({
-        'package.json': JSON.stringify({ type: 'module' }),
-        'pages/index.vue': endent`
+    async component() {
+      await fs.outputFile(
+        'pages/index.vue',
+        endent`
           <template>
             <tmp-component />
           </template>
@@ -37,36 +35,23 @@ export default tester(
           }
           </script>
         `,
-      })
-
-      const nuxt = await loadNuxt({ config: { telemetry: false } })
-      await build(nuxt)
-
-      const childProcess = execaCommand('nuxt start', { all: true })
-      await pEvent(
-        childProcess.all,
-        'data',
-        data => data.toString() === 'Listening http://[::]:3000\n',
       )
 
-      const browser = await puppeteer.launch()
-
-      const page = await browser.newPage()
+      const nuxt = execaCommand('nuxt dev')
       try {
-        await page.goto('http://localhost:3000')
+        await nuxtDevReady()
+        await this.page.goto('http://localhost:3000')
 
-        const component = await page.waitForSelector('.tmp-component')
+        const component = await this.page.waitForSelector('.tmp-component')
         expect(await component.evaluate(el => el.innerText)).toEqual(
           'Hello world',
         )
       } finally {
-        await browser.close()
-        await kill(childProcess.pid)
+        await kill(nuxt.pid)
       }
     },
-    plugin: async () => {
+    async plugin() {
       await outputFiles({
-        'package.json': JSON.stringify({ type: 'module' }),
         'pages/index.vue': endent`
           <template>
             <tmp-component />
@@ -79,29 +64,17 @@ export default tester(
         `,
       })
 
-      const nuxt = await loadNuxt({ config: { telemetry: false } })
-      await build(nuxt)
-
-      const childProcess = execaCommand('nuxt start', { all: true })
-      await pEvent(
-        childProcess.all,
-        'data',
-        data => data.toString() === 'Listening http://[::]:3000\n',
-      )
-
-      const browser = await puppeteer.launch()
-
-      const page = await browser.newPage()
+      const nuxt = execaCommand('nuxt dev')
       try {
-        await page.goto('http://localhost:3000')
+        await nuxtDevReady()
+        await this.page.goto('http://localhost:3000')
 
-        const component = await page.waitForSelector('.tmp-component')
+        const component = await this.page.waitForSelector('.tmp-component')
         expect(await component.evaluate(el => el.innerText)).toEqual(
           'Hello world',
         )
       } finally {
-        await browser.close()
-        await kill(childProcess.pid)
+        await kill(nuxt.pid)
       }
     },
     script: async () => {
@@ -147,11 +120,7 @@ export default tester(
         await fs.mkdir('tmp-component')
         await chdir('tmp-component', async () => {
           await outputFiles({
-            'package.json': JSON.stringify({
-              baseConfig: P.resolve('..', 'src', 'index.js'),
-              name: 'tmp-component',
-              type: 'module',
-            }),
+            'package.json': JSON.stringify({ name: 'tmp-component' }),
             'src/index.vue': endent`
               <template>
                 <div class="tmp-component">Hello world</div>
@@ -159,10 +128,11 @@ export default tester(
             `,
           })
           await new Base(self).prepare()
-          await self().commands.prepublishOnly({ log: false })
+          await self().commands.prepublishOnly()
         })
       },
     },
     testerPluginTmpDir(),
+    testerPluginPuppeteer(),
   ],
 )

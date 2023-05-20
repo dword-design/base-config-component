@@ -13,7 +13,7 @@ export default config => ({
   allowedMatches: ['src'],
   commands: {
     prepublishOnly: async (options = {}) => {
-      options = { log: true, ...options }
+      options = { log: process.env.NODE_ENV !== 'test', ...options }
       try {
         await fs.outputFile(P.join('src', 'entry.js'), getEntry())
         await build({
