@@ -37,7 +37,7 @@ export default config => ({
   npmPublish: true,
   packageConfig: {
     browser: 'dist/index.min.js',
-    exports: 'dist/index.esm.js',
+    exports: './dist/index.esm.js',
     main: 'dist/index.esm.js',
     unpkg: 'dist/index.min.js',
   },
