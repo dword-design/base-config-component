@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/dword-design/base-config-component/compare/v3.0.1...v3.0.2) (2023-05-29)
+
+
+### Bug Fixes
+
+* update index.js ([cb7e381](https://github.com/dword-design/base-config-component/commit/cb7e3810fb880751569d86132afcfafbb3e27f19))
+
 ## [3.0.1](https://github.com/dword-design/base-config-component/compare/v3.0.0...v3.0.1) (2023-05-29)
 
 
