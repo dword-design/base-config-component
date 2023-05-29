@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/dword-design/base-config-component/compare/v3.0.0...v3.0.1) (2023-05-29)
+
+
+### Bug Fixes
+
+* fix export formats ([45d6631](https://github.com/dword-design/base-config-component/commit/45d663193688087379bf87dc8b89d44321e917ae))
+
 # [3.0.0](https://github.com/dword-design/base-config-component/compare/v2.0.55...v3.0.0) (2023-05-20)
 
 
