@@ -12,17 +12,19 @@ import viteConfig from './vite-config.js'
 export default config => ({
   allowedMatches: ['src'],
   commands: {
-    prepublishOnly: async (options = {}) => {
-      options = { log: process.env.NODE_ENV !== 'test', ...options }
-      try {
-        await fs.outputFile(P.join('src', 'entry.js'), getEntry())
-        await build({
-          ...viteConfig,
-          ...(!options.log && { logLevel: 'warn' }),
-        })
-      } finally {
-        await fs.remove(P.join('src', 'entry.js'))
-      }
+    prepublishOnly: {
+      handler: async (options = {}) => {
+        options = { log: process.env.NODE_ENV !== 'test', ...options }
+        try {
+          await fs.outputFile(P.join('src', 'entry.js'), getEntry(config))
+          await build({
+            ...viteConfig,
+            ...(!options.log && { logLevel: 'warn' }),
+          })
+        } finally {
+          await fs.remove(P.join('src', 'entry.js'))
+        }
+      },
     },
   },
   depcheckConfig: {

@@ -50,6 +50,49 @@ export default tester(
         await kill(nuxt.pid)
       }
     },
+    async 'custom name'() {
+      await outputFiles({
+        'pages/index.vue': endent`
+          <template>
+            <tmp-component />
+          </template>
+        `,
+        'plugins/plugin.js': endent`
+          import TmpComponent from '../tmp-component'
+
+          export default defineNuxtPlugin(nuxtApp => nuxtApp.vueApp.use(TmpComponent))
+        `,
+        'tmp-component': {
+          'package.json': JSON.stringify({ name: 'foo' }),
+          'src/index.vue': endent`
+            <template>
+              <div class="tmp-component">Hello world</div>
+            </template>
+          `,
+        },
+      })
+      await chdir('tmp-component', async () => {
+        const base = new Base({
+          componentName: 'TmpComponent',
+          name: '../../src/index.js',
+        })
+        await base.prepare()
+        await base.run('prepublishOnly')
+      })
+
+      const nuxt = execaCommand('nuxt dev')
+      try {
+        await nuxtDevReady()
+        await this.page.goto('http://localhost:3000')
+
+        const component = await this.page.waitForSelector('.tmp-component')
+        expect(await component.evaluate(el => el.innerText)).toEqual(
+          'Hello world',
+        )
+      } finally {
+        await kill(nuxt.pid)
+      }
+    },
     async plugin() {
       await outputFiles({
         'pages/index.vue': endent`
@@ -127,8 +170,10 @@ export default tester(
               </template>
             `,
           })
-          await new Base(self).prepare()
-          await self().commands.prepublishOnly()
+
+          const base = new Base(self)
+          await base.prepare()
+          await base.run('prepublishOnly')
         })
       },
     },
