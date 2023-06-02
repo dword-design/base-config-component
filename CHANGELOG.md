@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/dword-design/base-config-component/compare/v3.0.2...v3.0.3) (2023-06-02)
+
+
+### Bug Fixes
+
+* customize component name ([f5e76c8](https://github.com/dword-design/base-config-component/commit/f5e76c83484679c818580be30776135dfad77bde))
+
 ## [3.0.2](https://github.com/dword-design/base-config-component/compare/v3.0.1...v3.0.2) (2023-05-29)
 
 
