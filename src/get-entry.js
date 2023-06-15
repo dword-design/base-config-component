@@ -8,13 +8,7 @@ export default config => {
   return endent`
     import component from './index.vue'
 
-    const install = app => {
-      if (install.installed) return
-      install.installed = true
-      app.component('${componentName}', component)
-    };
-
-    component.install = install
+    component.install = app => app.component('${componentName}', component)
 
     if (typeof window !== 'undefined') {
       window.${componentName} = component
