@@ -1,3 +1,10 @@
+## [3.0.4](https://github.com/dword-design/base-config-component/compare/v3.0.3...v3.0.4) (2023-06-15)
+
+
+### Bug Fixes
+
+* foo ([e33b478](https://github.com/dword-design/base-config-component/commit/e33b4783246d60c06e3a63d4e373016beec69da6))
+
 ## [3.0.3](https://github.com/dword-design/base-config-component/compare/v3.0.2...v3.0.3) (2023-06-02)
 
 
