@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/dword-design/base-config-component/compare/v3.0.4...v4.0.0) (2024-01-24)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#189](https://github.com/dword-design/base-config-component/issues/189)) ([62ef0b8](https://github.com/dword-design/base-config-component/commit/62ef0b89bc909c1682e6820ef58f041c204aeac8))
+
+
+### BREAKING CHANGES
+
+* drop node 16
+
 ## [3.0.4](https://github.com/dword-design/base-config-component/compare/v3.0.3...v3.0.4) (2023-06-15)
 
 
