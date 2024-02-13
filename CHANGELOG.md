@@ -1,3 +1,10 @@
+## [4.0.1](https://github.com/dword-design/base-config-component/compare/v4.0.0...v4.0.1) (2024-02-13)
+
+
+### Bug Fixes
+
+* remove node version ([#202](https://github.com/dword-design/base-config-component/issues/202)) ([93ada40](https://github.com/dword-design/base-config-component/commit/93ada4007a52f7c6aba158560f85c0aee18dd10d))
+
 # [4.0.0](https://github.com/dword-design/base-config-component/compare/v3.0.4...v4.0.0) (2024-01-24)
 
 
