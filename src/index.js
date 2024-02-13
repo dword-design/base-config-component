@@ -35,7 +35,6 @@ export default config => ({
   },
   editorIgnore: ['dist', '.browserslistrc'],
   gitignore: ['/dist', '.browserslistrc'],
-  nodeVersion: 18,
   npmPublish: true,
   packageConfig: {
     browser: 'dist/index.min.js',
