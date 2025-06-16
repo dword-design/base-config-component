@@ -1,16 +1,13 @@
-import { endent, join } from '@dword-design/functions'
+import endent from 'endent';
 
-import getComponentName from './get-component-name.js'
-import getPackageName from './get-package-name.js'
-import { vueCdnScript } from './variables.js'
+import getComponentName from './get-component-name';
+import getPackageName from './get-package-name';
+import { vueCdnScript } from './variables';
 
-export default (config = {}) => {
-  config.cdnExtraScripts = config.cdnExtraScripts || []
-
-  const packageName = getPackageName()
-
-  const componentName = getComponentName(config)
-
+export default (config, { cwd = '.' } = {}) => {
+  config.cdnExtraScripts = config.cdnExtraScripts || [];
+  const packageName = getPackageName({ cwd });
+  const componentName = getComponentName(config, { cwd });
   return endent`
     ## Install via a package manager
 
@@ -55,13 +52,11 @@ export default (config = {}) => {
     ## Install via CDN
 
     \`\`\`html
-    ${
-      [
-        vueCdnScript,
-        ...config.cdnExtraScripts,
-        `<script src="https://unpkg.com/${packageName}"></script>`,
-      ] |> join('\n')
-    }
+    ${[
+      vueCdnScript,
+      ...config.cdnExtraScripts,
+      `<script src="https://unpkg.com/${packageName}"></script>`,
+    ].join('\n')}
     \`\`\`
-  `
-}
+  `;
+};

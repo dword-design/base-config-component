@@ -1,0 +1,47 @@
+## Install via a package manager
+
+```bash
+# npm
+$ npm install foo-bar
+
+# Yarn
+$ yarn add foo-bar
+```
+
+Add to local components:
+
+```html
+<script>
+import FooBar from 'foo-bar'
+
+export default {
+  components: {
+    FooBar,
+  },
+}
+</script>
+```
+
+Or register as a global component:
+
+```js
+import FooBar from 'foo-bar'
+
+app.component('FooBar', FooBar)
+```
+
+Or register as a plugin:
+
+```js
+import FooBar from 'foo-bar'
+
+app.use(FooBar)
+```
+
+## Install via CDN
+
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="https://unpkg.com/foo-bar"></script>
+```

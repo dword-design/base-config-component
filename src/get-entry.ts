@@ -1,10 +1,9 @@
-import { endent } from '@dword-design/functions'
+import endent from 'endent';
 
-import getComponentName from './get-component-name.js'
+import getComponentName from './get-component-name';
 
-export default config => {
-  const componentName = getComponentName(config)
-
+export default (config, { cwd = '.' } = {}) => {
+  const componentName = getComponentName(config, { cwd });
   return endent`
     import component from './index.vue'
 
@@ -15,5 +14,5 @@ export default config => {
     }
 
     export default component
-  `
-}
+  `;
+};
