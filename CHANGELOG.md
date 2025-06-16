@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/dword-design/base-config-component/compare/v4.0.1...v5.0.0) (2025-06-16)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#205](https://github.com/dword-design/base-config-component/issues/205)) ([83d4eec](https://github.com/dword-design/base-config-component/commit/83d4eecdfaa57930b230d5f2d47e6792297e1939))
+
+
+### BREAKING CHANGES
+
+* typescript
+
 ## [4.0.1](https://github.com/dword-design/base-config-component/compare/v4.0.0...v4.0.1) (2024-02-13)
 
 
