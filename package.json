@@ -37,7 +37,7 @@
     "fs-extra": "^11.0.0",
     "load-pkg": "^4.0.0",
     "parse-packagejson-name": "^1.0.1",
-    "vite": "^5.0.12",
+    "vite": "^6.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
