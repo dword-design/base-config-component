@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@dword-design/depcheck-parser-sass": "^4.0.4",
-    "@vitejs/plugin-vue": "^5.0.3",
+    "@vitejs/plugin-vue": "^6.0.0",
     "change-case": "^5.4.2",
     "depcheck-parser-vue": "^5.0.0",
     "endent": "npm:@dword-design/endent@^1.4.1",
