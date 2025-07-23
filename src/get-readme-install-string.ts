@@ -4,7 +4,10 @@ import getComponentName from './get-component-name';
 import getPackageName from './get-package-name';
 import { vueCdnScript } from './variables';
 
-export default (config, { cwd = '.' } = {}) => {
+export default (
+  config: { cdnExtraScripts?: string[]; componentName?: string },
+  { cwd = '.' } = {},
+) => {
   config.cdnExtraScripts = config.cdnExtraScripts || [];
   const packageName = getPackageName({ cwd });
   const componentName = getComponentName(config, { cwd });

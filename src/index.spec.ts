@@ -10,6 +10,7 @@ import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
 import kill from 'tree-kill-promise';
 
+import type { BaseConfig } from './base-config';
 import { vueCdnScript } from './variables';
 
 test('component', async ({ page }, testInfo) => {
@@ -40,7 +41,7 @@ test('component', async ({ page }, testInfo) => {
 
   const nuxt = execaCommand('nuxt dev', {
     cwd,
-    env: { PORT: port },
+    env: { PORT: String(port) },
     reject: false,
     stderr: 'inherit',
   });
@@ -76,7 +77,8 @@ test('custom name', async ({ page }, testInfo) => {
     `,
   });
 
-  const base = new Base(
+  // Type-safe configuration creation with componentName support
+  const base = new Base<BaseConfig>(
     { componentName: 'TmpComponent', name: '../../src' },
     { cwd },
   );
@@ -87,7 +89,7 @@ test('custom name', async ({ page }, testInfo) => {
 
   const nuxt = execaCommand('nuxt dev', {
     cwd,
-    env: { PORT: port },
+    env: { PORT: String(port) },
     reject: false,
     stderr: 'inherit',
   });
@@ -130,7 +132,7 @@ test('plugin', async ({ page }, testInfo) => {
 
   const nuxt = execaCommand('nuxt dev', {
     cwd,
-    env: { PORT: port },
+    env: { PORT: String(port) },
     reject: false,
     stderr: 'inherit',
   });
