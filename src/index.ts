@@ -1,21 +1,27 @@
 import pathLib from 'node:path';
 
+import type { Base, PartialCommandOptions } from '@dword-design/base';
+import { defineBaseConfig } from '@dword-design/base';
 import depcheckParserSass from '@dword-design/depcheck-parser-sass';
-import depcheckParserVue from 'depcheck-parser-vue';
+import depcheck from 'depcheck';
 import endent from 'endent';
 import fs from 'fs-extra';
 import { build } from 'vite';
 
+import { BaseConfig } from './base-config';
 import getEntry from './get-entry';
 import getReadmeInstallString from './get-readme-install-string';
 import viteConfig from './vite-config';
 
-export default function (config) {
+export default defineBaseConfig(function (
+  this: Base<BaseConfig>,
+  config: BaseConfig,
+) {
   return {
     allowedMatches: ['src'],
     commands: {
       prepublishOnly: {
-        handler: async (options = {}) => {
+        handler: async (options: PartialCommandOptions = {}) => {
           options = { log: process.env.NODE_ENV !== 'test', ...options };
 
           try {
@@ -38,7 +44,7 @@ export default function (config) {
     depcheckConfig: {
       parsers: {
         '**/*.scss': depcheckParserSass,
-        '**/*.vue': depcheckParserVue,
+        '**/*.vue': depcheck.parser.vue,
       },
     },
     editorIgnore: ['dist', '.browserslistrc'],
@@ -62,4 +68,4 @@ export default function (config) {
       ),
     readmeInstallString: getReadmeInstallString(config, { cwd: this.cwd }),
   };
-}
+});
