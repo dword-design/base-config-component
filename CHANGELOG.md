@@ -1,3 +1,15 @@
+# [6.0.0](https://github.com/dword-design/base-config-component/compare/v5.0.0...v6.0.0) (2025-07-23)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#217](https://github.com/dword-design/base-config-component/issues/217)) ([f3527e5](https://github.com/dword-design/base-config-component/commit/f3527e5727cff7d44f6253a3bd3887a7729b5291))
+
+
+### BREAKING CHANGES
+
+* node.js >= 20
+
 # [5.0.0](https://github.com/dword-design/base-config-component/compare/v4.0.1...v5.0.0) (2025-06-16)
 
 
