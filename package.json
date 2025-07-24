@@ -40,7 +40,7 @@
     "fs-extra": "^11.3.0",
     "load-pkg": "^4.0.0",
     "parse-packagejson-name": "^1.0.1",
-    "vite": "^5.4.19",
+    "vite": "^7.0.0",
     "vue": "^3.5.17"
   },
   "devDependencies": {
