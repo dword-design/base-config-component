@@ -56,7 +56,7 @@ test('component', async ({ page }, testInfo) => {
   }
 });
 
-test('generated files', async ({}, testInfo) => {
+test.only('generated files', async ({}, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {

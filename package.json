@@ -31,7 +31,7 @@
     "verify": "base verify"
   },
   "dependencies": {
-    "@dword-design/base": "^15.1.6",
+    "@dword-design/base": "^15.2.4",
     "@dword-design/depcheck-parser-sass": "^4.0.4",
     "@vitejs/plugin-vue": "^5.2.4",
     "change-case": "^5.4.4",
@@ -44,16 +44,16 @@
     "parse-packagejson-name": "^1.0.1",
     "vite": "^5.4.19",
     "vite-plugin-dts": "^4.5.4",
-    "vue": "^3.5.17"
+    "vue": "^3.5.18"
   },
   "devDependencies": {
-    "@playwright/browser-chromium": "^1.54.1",
-    "@playwright/test": "^1.54.1",
+    "@playwright/browser-chromium": "^1.54.2",
+    "@playwright/test": "^1.54.2",
     "file-url": "^4.0.0",
     "fs-extra": "^11.3.0",
     "get-port": "^7.1.0",
     "globby": "^14.1.0",
-    "nuxt": "^3.17.7",
+    "nuxt": "^3.18.0",
     "nuxt-dev-ready": "^5.0.1",
     "tree-kill-promise": "^4.0.0"
   },

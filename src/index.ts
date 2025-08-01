@@ -9,6 +9,7 @@ import { BaseConfig } from './base-config';
 import getEntry from './get-entry';
 import getReadmeInstallString from './get-readme-install-string';
 import prepublishOnly from './prepublish-only';
+import build from './build';
 import viteConfig from './vite-config';
 
 export default defineBaseConfig(function (
@@ -16,8 +17,17 @@ export default defineBaseConfig(function (
   config: BaseConfig,
 ) {
   return {
+    eslintConfig: endent`
+      import { defineConfig, globalIgnores } from 'eslint/config';
+      import config from '@dword-design/eslint-config';
+
+      export default defineConfig([
+        globalIgnores(['eslint.config.ts', 'eslint.lint-staged.config.ts', 'vite.config.ts', 'entry.ts']),
+        config,
+      ]);\n
+    `,
     allowedMatches: ['src'],
-    commands: { prepublishOnly },
+    commands: { build, prepublishOnly },
     depcheckConfig: {
       parsers: {
         '**/*.scss': depcheckParserSass,
