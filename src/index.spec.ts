@@ -9,6 +9,7 @@ import getPort from 'get-port';
 import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
 import kill from 'tree-kill-promise';
+import { globby } from 'globby';
 
 import type { BaseConfig } from './base-config';
 import { vueCdnScript } from './variables';
@@ -53,6 +54,25 @@ test('component', async ({ page }, testInfo) => {
   } finally {
     await kill(nuxt.pid);
   }
+});
+
+test.only('generatedFiles', async ({}, testInfo) => {
+  const cwd = testInfo.outputPath();
+
+  await outputFiles(cwd, {
+    'package.json': JSON.stringify({ name: 'tmp-component' }),
+    'src/index.vue': endent`
+      <template>
+        <div class="tmp-component">Hello world</div>
+      </template>
+    `,
+  });
+
+  const base = new Base({ name: '../../src' }, { cwd });
+  await base.prepare();
+  await base.run('prepublishOnly');
+  const files = await globby('**', { cwd: pathLib.join(cwd, 'dist') });
+  expect(files).toEqual(['entry.d.ts', 'eslint.config.d.ts', 'index.esm.js', 'index.min.js', 'src/index.vue.d.ts']);
 });
 
 test('custom name', async ({ page }, testInfo) => {

@@ -23,21 +23,11 @@ export default defineBaseConfig(function (
       prepublishOnly: {
         handler: async (options: PartialCommandOptions = {}) => {
           options = { log: process.env.NODE_ENV !== 'test', ...options };
-
-          try {
-            await fs.outputFile(
-              pathLib.join(this.cwd, 'src', 'entry.ts'),
-              getEntry(config, { cwd: this.cwd }),
-            );
-
-            await build({
-              root: this.cwd,
-              ...viteConfig,
-              ...(!options.log && { logLevel: 'warn' }),
-            });
-          } finally {
-            await fs.remove(pathLib.join(this.cwd, 'src', 'entry.ts'));
-          }
+          await build({
+            root: this.cwd,
+            ...viteConfig,
+            ...(!options.log && { logLevel: 'warn' }),
+          });
         },
       },
     },
@@ -52,11 +42,16 @@ export default defineBaseConfig(function (
     npmPublish: true,
     packageConfig: {
       browser: 'dist/index.min.js',
-      exports: './dist/index.esm.js',
       main: 'dist/index.esm.js',
       unpkg: 'dist/index.min.js',
+      '.': {
+        import: {
+          default: './dist/index.esm.js',
+          types: './dist/entry.d.ts',
+        },
+      },
     },
-    prepare: () =>
+    prepare: () => Promise.all([
       fs.outputFile(
         pathLib.join(this.cwd, '.browserslistrc'),
         endent`
@@ -66,6 +61,11 @@ export default defineBaseConfig(function (
 
         `,
       ),
+      fs.outputFile(
+        pathLib.join(this.cwd, 'entry.ts'),
+        getEntry(config, { cwd: this.cwd }),
+      ),
+    ]),
     readmeInstallString: getReadmeInstallString(config, { cwd: this.cwd }),
   };
 });
