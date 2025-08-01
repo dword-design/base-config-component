@@ -33,7 +33,7 @@
   "dependencies": {
     "@dword-design/base": "^15.2.4",
     "@dword-design/depcheck-parser-sass": "^4.0.4",
-    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitejs/plugin-vue": "^6.0.0",
     "change-case": "^5.4.4",
     "depcheck": "^1.4.7",
     "depcheck-package-name": "^4.0.0",
