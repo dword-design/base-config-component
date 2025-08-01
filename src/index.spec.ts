@@ -25,7 +25,7 @@ test('component', async ({ page }, testInfo) => {
       </template>
 
       <script setup>
-      import TmpComponent from '..';
+      import TmpComponent from '../entry';
       </script>
     `,
     'src/index.vue': endent`
@@ -56,7 +56,7 @@ test('component', async ({ page }, testInfo) => {
   }
 });
 
-test('generatedFiles', async ({}, testInfo) => {
+test('generated files', async ({}, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
@@ -93,7 +93,7 @@ test('custom name', async ({ page }, testInfo) => {
       </template>
     `,
     'plugins/plugin.ts': endent`
-      import TmpComponent from '..';
+      import TmpComponent from '../entry';
 
       export default defineNuxtPlugin(nuxtApp => nuxtApp.vueApp.use(TmpComponent));
     `,
@@ -141,7 +141,7 @@ test('plugin', async ({ page }, testInfo) => {
       </template>
     `,
     'plugins/plugin.ts': endent`
-      import TmpComponent from '..';
+      import TmpComponent from '../entry';
 
       export default defineNuxtPlugin(nuxtApp => nuxtApp.vueApp.use(TmpComponent));
     `,
