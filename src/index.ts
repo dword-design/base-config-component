@@ -1,16 +1,14 @@
-import pathLib from 'node:path';
-
-import type { Base, PartialCommandOptions } from '@dword-design/base';
+import type { Base } from '@dword-design/base';
 import { defineBaseConfig } from '@dword-design/base';
 import depcheckParserSass from '@dword-design/depcheck-parser-sass';
 import depcheck from 'depcheck';
 import endent from 'endent';
-import fs from 'fs-extra';
-import { build } from 'vite';
+import outputFiles from 'output-files';
 
 import { BaseConfig } from './base-config';
 import getEntry from './get-entry';
 import getReadmeInstallString from './get-readme-install-string';
+import prepublishOnly from './prepublish-only';
 import viteConfig from './vite-config';
 
 export default defineBaseConfig(function (
@@ -19,26 +17,14 @@ export default defineBaseConfig(function (
 ) {
   return {
     allowedMatches: ['src'],
-    commands: {
-      prepublishOnly: {
-        handler: async (options: PartialCommandOptions = {}) => {
-          options = { log: process.env.NODE_ENV !== 'test', ...options };
-
-          await build({
-            root: this.cwd,
-            ...viteConfig,
-            ...(!options.log && { logLevel: 'warn' }),
-          });
-        },
-      },
-    },
+    commands: { prepublishOnly },
     depcheckConfig: {
       parsers: {
         '**/*.scss': depcheckParserSass,
         '**/*.vue': depcheck.parser.vue,
       },
     },
-    editorIgnore: ['dist', '.browserslistrc'],
+    editorIgnore: ['.browserslistrc', 'dist', 'vite.config.ts'],
     gitignore: ['/dist', '.browserslistrc'],
     npmPublish: true,
     packageConfig: {
@@ -50,21 +36,15 @@ export default defineBaseConfig(function (
       unpkg: 'dist/index.min.js',
     },
     prepare: () =>
-      Promise.all([
-        fs.outputFile(
-          pathLib.join(this.cwd, '.browserslistrc'),
-          endent`
-            current node
-            last 2 versions and > 2%
-            ie > 10
-
-          `,
-        ),
-        fs.outputFile(
-          pathLib.join(this.cwd, 'entry.ts'),
-          getEntry(config, { cwd: this.cwd }),
-        ),
-      ]),
+      outputFiles(this.cwd, {
+        '.browserslistrc': endent`
+          current node
+          last 2 versions and > 2%
+          ie > 10\n
+        `,
+        'entry.ts': getEntry(config, { cwd: this.cwd }),
+        'vite.config.ts': viteConfig,
+      }),
     readmeInstallString: getReadmeInstallString(config, { cwd: this.cwd }),
   };
 });

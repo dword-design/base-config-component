@@ -1,16 +1,21 @@
-import vue from '@vitejs/plugin-vue';
-import type { LibraryFormats } from 'vite';
-import dts from 'vite-plugin-dts';
+import packageName from 'depcheck-package-name';
+import endent from 'endent';
 
-export default {
-  build: {
-    lib: {
-      entry: 'entry.ts',
-      fileName: format => `index.${format === 'iife' ? 'min' : 'esm'}.js`,
-      formats: ['es', 'iife'] as LibraryFormats[], // TODO: The cast shouldn't be necessary
-      name: 'Lib',
+export default endent`
+  import vue from '${packageName`@vitejs/plugin-vue`}';
+  import dts from '${packageName`vite-plugin-dts`}';
+  import { defineConfig } from 'vite';
+
+  export default defineConfig({
+    build: {
+      lib: {
+        entry: 'entry.ts',
+        fileName: format => \`index.\${format === 'iife' ? 'min' : 'esm'}.js\`,
+        formats: ['es', 'iife'],
+        name: 'Lib',
+      },
+      rollupOptions: { external: ['vue'], output: { globals: { vue: 'Vue' } } },
     },
-    rollupOptions: { external: ['vue'], output: { globals: { vue: 'Vue' } } },
-  },
-  plugins: [vue(), dts()],
-};
+    plugins: [vue(), dts()],
+  });\n
+`;

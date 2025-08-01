@@ -23,15 +23,21 @@ importers:
       depcheck:
         specifier: ^1.4.7
         version: 1.4.7
+      depcheck-package-name:
+        specifier: ^4.0.0
+        version: 4.0.0
       endent:
         specifier: npm:@dword-design/endent@^1.4.7
         version: '@dword-design/endent@1.4.7'
-      fs-extra:
-        specifier: ^11.3.0
-        version: 11.3.0
+      execa:
+        specifier: ^9.6.0
+        version: 9.6.0
       load-pkg:
         specifier: ^4.0.0
         version: 4.0.0
+      output-files:
+        specifier: ^3.0.0
+        version: 3.0.0
       parse-packagejson-name:
         specifier: ^1.0.1
         version: 1.0.1
@@ -51,12 +57,12 @@ importers:
       '@playwright/test':
         specifier: ^1.54.1
         version: 1.54.1
-      execa:
-        specifier: ^9.6.0
-        version: 9.6.0
       file-url:
         specifier: ^4.0.0
         version: 4.0.0
+      fs-extra:
+        specifier: ^11.3.0
+        version: 11.3.0
       get-port:
         specifier: ^7.1.0
         version: 7.1.0
@@ -69,9 +75,6 @@ importers:
       nuxt-dev-ready:
         specifier: ^5.0.1
         version: 5.0.1
-      output-files:
-        specifier: ^3.0.0
-        version: 3.0.0
       tree-kill-promise:
         specifier: ^4.0.0
         version: 4.0.0
@@ -8816,7 +8819,7 @@ snapshots:
       '@babel/helper-module-imports': 7.27.1
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/parser': 7.28.0
-      '@vue/compiler-sfc': 3.5.17
+      '@vue/compiler-sfc': 3.5.18
     transitivePeerDependencies:
       - supports-color
 
@@ -9931,7 +9934,7 @@ snapshots:
   detective-vue2@2.2.0(typescript@5.8.3):
     dependencies:
       '@dependents/detective-less': 5.0.1
-      '@vue/compiler-sfc': 3.5.17
+      '@vue/compiler-sfc': 3.5.18
       detective-es6: 5.0.1
       detective-sass: 6.0.1
       detective-scss: 5.0.1

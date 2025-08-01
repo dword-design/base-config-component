@@ -56,7 +56,7 @@ test('component', async ({ page }, testInfo) => {
   }
 });
 
-test.only('generated files', async ({}, testInfo) => {
+test('generated files', async ({}, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
@@ -78,6 +78,7 @@ test.only('generated files', async ({}, testInfo) => {
     'eslint.config.d.ts',
     'index.esm.js',
     'index.min.js',
+    'vite.config.d.ts',
     'src/index.vue.d.ts',
   ]);
 });
