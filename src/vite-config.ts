@@ -1,8 +1,6 @@
-import P from 'node:path';
-
 import vue from '@vitejs/plugin-vue';
 import type { LibraryFormats } from 'vite';
-import dts from 'vite-plugin-dts'
+import dts from 'vite-plugin-dts';
 
 export default {
   build: {

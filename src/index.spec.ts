@@ -6,10 +6,10 @@ import endent from 'endent';
 import { execaCommand } from 'execa';
 import fileUrl from 'file-url';
 import getPort from 'get-port';
+import { globby } from 'globby';
 import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
 import kill from 'tree-kill-promise';
-import { globby } from 'globby';
 
 import type { BaseConfig } from './base-config';
 import { vueCdnScript } from './variables';
@@ -56,7 +56,7 @@ test('component', async ({ page }, testInfo) => {
   }
 });
 
-test.only('generatedFiles', async ({}, testInfo) => {
+test('generatedFiles', async ({}, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
@@ -72,7 +72,14 @@ test.only('generatedFiles', async ({}, testInfo) => {
   await base.prepare();
   await base.run('prepublishOnly');
   const files = await globby('**', { cwd: pathLib.join(cwd, 'dist') });
-  expect(files).toEqual(['entry.d.ts', 'eslint.config.d.ts', 'index.esm.js', 'index.min.js', 'src/index.vue.d.ts']);
+
+  expect(files).toEqual([
+    'entry.d.ts',
+    'eslint.config.d.ts',
+    'index.esm.js',
+    'index.min.js',
+    'src/index.vue.d.ts',
+  ]);
 });
 
 test('custom name', async ({ page }, testInfo) => {

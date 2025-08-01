@@ -23,6 +23,7 @@ export default defineBaseConfig(function (
       prepublishOnly: {
         handler: async (options: PartialCommandOptions = {}) => {
           options = { log: process.env.NODE_ENV !== 'test', ...options };
+
           await build({
             root: this.cwd,
             ...viteConfig,
@@ -41,31 +42,29 @@ export default defineBaseConfig(function (
     gitignore: ['/dist', '.browserslistrc'],
     npmPublish: true,
     packageConfig: {
+      '.': {
+        import: { default: './dist/index.esm.js', types: './dist/entry.d.ts' },
+      },
       browser: 'dist/index.min.js',
       main: 'dist/index.esm.js',
       unpkg: 'dist/index.min.js',
-      '.': {
-        import: {
-          default: './dist/index.esm.js',
-          types: './dist/entry.d.ts',
-        },
-      },
     },
-    prepare: () => Promise.all([
-      fs.outputFile(
-        pathLib.join(this.cwd, '.browserslistrc'),
-        endent`
-          current node
-          last 2 versions and > 2%
-          ie > 10
+    prepare: () =>
+      Promise.all([
+        fs.outputFile(
+          pathLib.join(this.cwd, '.browserslistrc'),
+          endent`
+            current node
+            last 2 versions and > 2%
+            ie > 10
 
-        `,
-      ),
-      fs.outputFile(
-        pathLib.join(this.cwd, 'entry.ts'),
-        getEntry(config, { cwd: this.cwd }),
-      ),
-    ]),
+          `,
+        ),
+        fs.outputFile(
+          pathLib.join(this.cwd, 'entry.ts'),
+          getEntry(config, { cwd: this.cwd }),
+        ),
+      ]),
     readmeInstallString: getReadmeInstallString(config, { cwd: this.cwd }),
   };
 });
