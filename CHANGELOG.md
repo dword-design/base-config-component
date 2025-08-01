@@ -1,3 +1,12 @@
+## [6.0.1](https://github.com/dword-design/base-config-component/compare/v6.0.0...v6.0.1) (2025-08-01)
+
+
+### Bug Fixes
+
+* foo ([e3c7198](https://github.com/dword-design/base-config-component/commit/e3c71986275353cddeb63c47df4cafe2105f57d5))
+* generate typings ([86b01f1](https://github.com/dword-design/base-config-component/commit/86b01f1ae8f3cf726e6fcd359cf851212ed3786d))
+* generate typings ([9139d28](https://github.com/dword-design/base-config-component/commit/9139d286462cf2aba872d24fca5683ec96104c63))
+
 # [6.0.0](https://github.com/dword-design/base-config-component/compare/v5.0.0...v6.0.0) (2025-07-23)
 
 
