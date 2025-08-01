@@ -63,7 +63,7 @@ test('generated files', async ({}, testInfo) => {
     'package.json': JSON.stringify({ name: 'tmp-component' }),
     'src/index.vue': endent`
       <template>
-        <div class="tmp-component">Hello world</div>
+        <div>Hello world</div>
       </template>
     `,
   });
