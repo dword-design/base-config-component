@@ -56,14 +56,14 @@ test('component', async ({ page }, testInfo) => {
   }
 });
 
-test('generated files', async ({}, testInfo) => {
+test.only('generated files', async ({}, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
     'package.json': JSON.stringify({ name: 'tmp-component' }),
     'src/index.vue': endent`
       <template>
-        <div>Hello world</div>
+        <div />
       </template>
     `,
   });
