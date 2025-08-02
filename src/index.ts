@@ -42,10 +42,15 @@ export default defineBaseConfig(function (
     gitignore: ['/dist', '.browserslistrc'],
     npmPublish: true,
     packageConfig: {
-      '.': {
-        import: { default: './dist/index.esm.js', types: './dist/entry.d.ts' },
-      },
       browser: 'dist/index.min.js',
+      exports: {
+        '.': {
+          import: {
+            default: './dist/index.esm.js',
+            types: './dist/entry.d.ts',
+          },
+        },
+      },
       main: 'dist/index.esm.js',
       unpkg: 'dist/index.min.js',
     },
