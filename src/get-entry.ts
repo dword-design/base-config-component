@@ -12,7 +12,7 @@ export default (config: { componentName?: string }, { cwd = '.' } = {}) => {
     component.install = (app: App) => app.component('${componentName}', component);
 
     if (typeof globalThis !== 'undefined') {
-      (globalThis as unknown as Window).${componentName} = component;
+      (globalThis as Record<string, unknown>).${componentName} = component;
     }
 
     export default component;
