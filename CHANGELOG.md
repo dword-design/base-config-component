@@ -1,3 +1,12 @@
+## [6.0.2](https://github.com/dword-design/base-config-component/compare/v6.0.1...v6.0.2) (2025-08-02)
+
+
+### Bug Fixes
+
+* fo ([058d9b3](https://github.com/dword-design/base-config-component/commit/058d9b3221ff9cfb3ae28b92f88f57ab0d0dc0ce))
+* foo ([694c68f](https://github.com/dword-design/base-config-component/commit/694c68f43123a934a10af7ffef069fc483c17e59))
+* foo ([2b3a8b6](https://github.com/dword-design/base-config-component/commit/2b3a8b63745591ed68f208b3f140bc53bb45079f))
+
 ## [6.0.1](https://github.com/dword-design/base-config-component/compare/v6.0.0...v6.0.1) (2025-08-01)
 
 
