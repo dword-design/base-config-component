@@ -18,24 +18,26 @@ test('component', async ({ page }, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
-    'package.json': JSON.stringify({ name: 'tmp-component' }),
     'pages/index.vue': endent`
       <template>
         <tmp-component />
       </template>
 
       <script setup>
-      import TmpComponent from '../entry';
+      import TmpComponent from 'tmp-component';
       </script>
     `,
-    'src/index.vue': endent`
-      <template>
-        <div class="tmp-component">Hello world</div>
-      </template>
-    `,
+    'node_modules/tmp-component': {
+      'package.json': JSON.stringify({ name: 'tmp-component' }),
+      'src/index.vue': endent`
+        <template>
+          <div class="tmp-component">Hello world</div>
+        </template>
+      `,
+    },
   });
 
-  const base = new Base({ name: '../../src' }, { cwd });
+  const base = new Base({ name: '../../../../src' }, { cwd: pathLib.join(cwd, 'node_modules', 'tmp-component') });
   await base.prepare();
   await base.run('prepublishOnly');
   const port = await getPort();
@@ -87,28 +89,30 @@ test('custom name', async ({ page }, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
-    'package.json': JSON.stringify({ name: 'foo' }),
     'pages/index.vue': endent`
       <template>
         <tmp-component />
       </template>
     `,
     'plugins/plugin.ts': endent`
-      import TmpComponent from '../entry';
+      import TmpComponent from 'foo';
 
-      export default defineNuxtPlugin(nuxtApp => nuxtApp.vueApp.use(TmpComponent));
+      export default defineNuxtPlugin(({ vueApp }) => vueApp.use(TmpComponent));
     `,
-    'src/index.vue': endent`
-      <template>
-        <div class="tmp-component">Hello world</div>
-      </template>
-    `,
+    'node_modules/foo': {
+      'src/index.vue': endent`
+        <template>
+          <div class="tmp-component">Hello world</div>
+        </template>
+      `,
+      'package.json': JSON.stringify({ name: 'foo' }),
+    },
   });
 
   // Type-safe configuration creation with componentName support
   const base = new Base<BaseConfig>(
-    { componentName: 'TmpComponent', name: '../../src' },
-    { cwd },
+    { componentName: 'TmpComponent', name: '../../../../src' },
+    { cwd: pathLib.join(cwd, 'node_modules', 'foo') },
   );
 
   await base.prepare();
@@ -135,25 +139,27 @@ test('plugin', async ({ page }, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
-    'package.json': JSON.stringify({ name: 'tmp-component' }),
     'pages/index.vue': endent`
       <template>
         <tmp-component />
       </template>
     `,
     'plugins/plugin.ts': endent`
-      import TmpComponent from '../entry';
+      import TmpComponent from 'tmp-component';
 
-      export default defineNuxtPlugin(nuxtApp => nuxtApp.vueApp.use(TmpComponent));
+      export default defineNuxtPlugin(({ vueApp }) => vueApp.use(TmpComponent));
     `,
-    'src/index.vue': endent`
-      <template>
-        <div class="tmp-component">Hello world</div>
-      </template>
-    `,
+    'node_modules/tmp-component': {
+      'package.json': JSON.stringify({ name: 'tmp-component' }),
+      'src/index.vue': endent`
+        <template>
+          <div class="tmp-component">Hello world</div>
+        </template>
+      `,
+    },
   });
 
-  const base = new Base({ name: '../../src' }, { cwd });
+  const base = new Base({ name: '../../../../src' }, { cwd: pathLib.join(cwd, 'node_modules', 'tmp-component') });
   await base.prepare();
   await base.run('prepublishOnly');
   const port = await getPort();
