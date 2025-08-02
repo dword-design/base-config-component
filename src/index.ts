@@ -17,7 +17,11 @@ export default defineBaseConfig(function (
   config: BaseConfig,
 ) {
   return {
-    allowedMatches: Object.keys({ src: true, 'entry.ts': true, 'vite.config.ts': true }),
+    allowedMatches: Object.keys({
+      'entry.ts': true,
+      src: true,
+      'vite.config.ts': true,
+    }),
     commands: { build, prepublishOnly },
     depcheckConfig: {
       parsers: {
