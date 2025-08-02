@@ -3,7 +3,7 @@ import parsePackagejsonName from 'parse-packagejson-name';
 
 import getPackageName from './get-package-name';
 
-export default (config: { componentName? }, { cwd = '.' }) => {
+export default (config: { componentName?: string }, { cwd = '.' }) => {
   if (config.componentName) {
     return config.componentName;
   }

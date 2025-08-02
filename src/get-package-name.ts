@@ -1,3 +1,3 @@
-import loadPkg from 'load-pkg';
+import { readPackageSync } from 'read-pkg';
 
-export default ({ cwd = '.' } = {}) => loadPkg.sync(cwd).name;
+export default ({ cwd = '.' } = {}) => readPackageSync({ cwd }).name;

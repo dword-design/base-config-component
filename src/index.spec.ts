@@ -52,7 +52,7 @@ test('component', async ({ page }, testInfo) => {
     await page.goto(`http://localhost:${port}`);
     await expect(page.locator('.tmp-component')).toHaveText('Hello world');
   } finally {
-    await kill(nuxt.pid);
+    await kill(nuxt.pid!);
   }
 });
 
@@ -127,7 +127,7 @@ test('custom name', async ({ page }, testInfo) => {
     await page.goto(`http://localhost:${port}`);
     await expect(page.locator('.tmp-component')).toHaveText('Hello world');
   } finally {
-    await kill(nuxt.pid);
+    await kill(nuxt.pid!);
   }
 });
 
@@ -170,7 +170,7 @@ test('plugin', async ({ page }, testInfo) => {
     await page.goto(`http://localhost:${port}`);
     await expect(page.locator('.tmp-component')).toHaveText('Hello world');
   } finally {
-    await kill(nuxt.pid);
+    await kill(nuxt.pid!);
   }
 });
 
