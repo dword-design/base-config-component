@@ -17,7 +17,7 @@ export default defineBaseConfig(function (
   config: BaseConfig,
 ) {
   return {
-    allowedMatches: ['src'],
+    allowedMatches: Object.keys({ src: true, 'entry.ts': true, 'vite.config.ts': true }),
     commands: { build, prepublishOnly },
     depcheckConfig: {
       parsers: {
