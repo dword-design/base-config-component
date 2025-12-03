@@ -403,6 +403,7 @@ packages:
 
   '@dword-design/types-parse-packagejson-name@1.0.9999':
     resolution: {integrity: sha512-xp1RibOrLClL58eUVZlPWLyUap5RIZd5DMcxKNh2ArWmnwlFtJTNDr3jZtayAQhwXKjMGMBPwWcUbYuPNJ2pAg==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@emnapi/core@1.4.5':
     resolution: {integrity: sha512-XsLw1dEOpkSX/WucdqUhPWP7hDxSvZiY+fsUC14h+FtQ2Ifni4znbBt8punRX+Uj2JG/uDb8nEHVKvrVlvdZ5Q==}
