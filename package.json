@@ -54,7 +54,7 @@
     "file-url": "^4.0.0",
     "fs-extra": "^11.3.0",
     "get-port": "^7.1.0",
-    "globby": "^14.1.0",
+    "globby": "^16.0.0",
     "nuxt": "^3.18.0",
     "nuxt-dev-ready": "^5.0.1",
     "tree-kill-promise": "^4.0.0"
