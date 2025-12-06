@@ -31,7 +31,7 @@
     "verify": "base verify"
   },
   "dependencies": {
-    "@dword-design/base": "^15.2.4",
+    "@dword-design/base": "^16.0.0",
     "@dword-design/depcheck-parser-sass": "^5.0.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "change-case": "^5.4.4",
