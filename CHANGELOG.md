@@ -1,3 +1,16 @@
+# [7.0.0](https://github.com/dword-design/base-config-component/compare/v6.0.5...v7.0.0) (2025-12-06)
+
+
+### Bug Fixes
+
+* delete postcreate.sh ([d8ff387](https://github.com/dword-design/base-config-component/commit/d8ff3873c48e5032a114cdec084ba2f7a21ed858))
+* update dependency @dword-design/base to v16 ([#229](https://github.com/dword-design/base-config-component/issues/229)) ([ad6b629](https://github.com/dword-design/base-config-component/commit/ad6b6292bf1ef83d785152c629e49d0e932f9696))
+
+
+### BREAKING CHANGES
+
+* node >= 22
+
 ## [6.0.5](https://github.com/dword-design/base-config-component/compare/v6.0.4...v6.0.5) (2025-08-02)
 
 
