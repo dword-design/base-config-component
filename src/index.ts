@@ -67,3 +67,9 @@ export default defineBaseConfig(function (
     readmeInstallString: getReadmeInstallString(config, { cwd: this.cwd }),
   };
 });
+
+// TODO: Otherwise the full type of the config cannot be inferred by TypeScript when used somewhere else
+
+export { default as build } from './build';
+
+export { default as prepublishOnly } from './prepublish-only';
