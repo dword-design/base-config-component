@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/dword-design/base-config-component/compare/v7.0.0...v7.0.1) (2025-12-06)
+
+
+### Bug Fixes
+
+* fix ts type inferrence ([12dd743](https://github.com/dword-design/base-config-component/commit/12dd7435c813929acf019443e31b9ec7ee656e4a))
+
 # [7.0.0](https://github.com/dword-design/base-config-component/compare/v6.0.5...v7.0.0) (2025-12-06)
 
 
