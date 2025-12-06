@@ -82,6 +82,7 @@ test('generated files', async ({}, testInfo) => {
   expect(files).toEqual([
     'entry.d.ts',
     'eslint.config.d.ts',
+    'eslint.lint-staged.config.d.ts',
     'index.esm.js',
     'index.min.js',
     'vite.config.d.ts',
