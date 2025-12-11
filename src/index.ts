@@ -75,3 +75,5 @@ export { default as build } from './build';
 export { default as prepublishOnly } from './prepublish-only';
 
 export type { BaseConfig } from './base-config';
+
+export { default as getComponentName } from './get-component-name';
