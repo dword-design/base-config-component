@@ -73,3 +73,5 @@ export default defineBaseConfig(function (
 export { default as build } from './build';
 
 export { default as prepublishOnly } from './prepublish-only';
+
+export { BaseConfig } from './base-config';
