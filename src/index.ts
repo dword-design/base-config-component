@@ -74,4 +74,4 @@ export { default as build } from './build';
 
 export { default as prepublishOnly } from './prepublish-only';
 
-export { BaseConfig } from './base-config';
+export type { BaseConfig } from './base-config';
