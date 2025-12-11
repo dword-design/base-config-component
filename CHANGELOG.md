@@ -1,3 +1,11 @@
+## [7.0.2](https://github.com/dword-design/base-config-component/compare/v7.0.1...v7.0.2) (2025-12-11)
+
+
+### Bug Fixes
+
+* export base config ([aed60b1](https://github.com/dword-design/base-config-component/commit/aed60b1626d7fbf0e860d2d47d74646660904d5b))
+* export type ([98173e7](https://github.com/dword-design/base-config-component/commit/98173e7c370133fd6bca8b3173fab27f749a83c1))
+
 ## [7.0.1](https://github.com/dword-design/base-config-component/compare/v7.0.0...v7.0.1) (2025-12-06)
 
 
