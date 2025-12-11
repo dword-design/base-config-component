@@ -1,3 +1,10 @@
+## [7.0.3](https://github.com/dword-design/base-config-component/compare/v7.0.2...v7.0.3) (2025-12-11)
+
+
+### Bug Fixes
+
+* export getComponentName ([4157b2c](https://github.com/dword-design/base-config-component/commit/4157b2cbe454ed4457f46e6afd5ecc1879565d19))
+
 ## [7.0.2](https://github.com/dword-design/base-config-component/compare/v7.0.1...v7.0.2) (2025-12-11)
 
 
