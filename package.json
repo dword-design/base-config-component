@@ -34,7 +34,7 @@
     "@vitejs/plugin-vue": "^6.0.2",
     "change-case": "^5.4.4",
     "depcheck": "^1.4.7",
-    "depcheck-package-name": "^4.0.1",
+    "depcheck-package-name": "^5.0.0",
     "endent": "npm:@dword-design/endent@^1.4.7",
     "execa": "^9.6.1",
     "output-files": "^3.0.0",
