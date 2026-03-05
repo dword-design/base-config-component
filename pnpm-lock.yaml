@@ -24,8 +24,8 @@ importers:
         specifier: ^1.4.7
         version: 1.4.7
       depcheck-package-name:
-        specifier: ^4.0.1
-        version: 4.0.1
+        specifier: ^5.0.0
+        version: 5.0.0
       endent:
         specifier: npm:@dword-design/endent@^1.4.7
         version: '@dword-design/endent@1.4.7'
@@ -2844,6 +2844,10 @@ packages:
     resolution: {integrity: sha512-Jt6XKYnjtC9AMP8+lD+I7J+Fr39e9Ll6O7xg6pzqhxFiCtUuDFPLrY89bMLtXBqFvzTE8h071K33CshYJmRuIg==}
     engines: {node: '>=20'}
 
+  depcheck-package-name@5.0.0:
+    resolution: {integrity: sha512-TmI3C6OMPmDoqNkv3pTUlSgfi2KoTpckBM98+p3bsCbES9OR7oHYCzgxm0QR6DdKSkrt/mFDNx8CKhCtbWRVag==}
+    engines: {node: '>=22'}
+
   depcheck@1.4.7:
     resolution: {integrity: sha512-1lklS/bV5chOxwNKA/2XUUk/hPORp8zihZsXflr8x0kLwmcZ9Y9BsS6Hs3ssvA+2wUVbG0U2Ciqvm1SokNjPkA==}
     engines: {node: '>=10'}
@@ -3536,6 +3540,7 @@ packages:
   git-raw-commits@2.0.11:
     resolution: {integrity: sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A==}
     engines: {node: '>=10'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   git-up@8.1.1:
@@ -6061,6 +6066,7 @@ packages:
 
   unplugin-vue-router@0.16.2:
     resolution: {integrity: sha512-lE6ZjnHaXfS2vFI/PSEwdKcdOo5RwAbCKUnPBIN9YwLgSWas3x+qivzQvJa/uxhKzJldE6WK43aDKjGj9Rij9w==}
+    deprecated: 'Merged into vuejs/router. Migrate: https://router.vuejs.org/guide/migration/v4-to-v5.html'
     peerDependencies:
       '@vue/compiler-sfc': ^3.5.17
       vue-router: ^4.6.0
@@ -9632,6 +9638,10 @@ snapshots:
   depcheck-detector-package-name@3.0.4: {}
 
   depcheck-package-name@4.0.1:
+    dependencies:
+      tagged-template-noop: 2.1.1
+
+  depcheck-package-name@5.0.0:
     dependencies:
       tagged-template-noop: 2.1.1
 
