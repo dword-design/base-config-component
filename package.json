@@ -37,7 +37,7 @@
     "depcheck-package-name": "^4.0.1",
     "endent": "npm:@dword-design/endent@^1.4.7",
     "execa": "^9.6.1",
-    "output-files": "^3.0.0",
+    "output-files": "^4.0.0",
     "parse-packagejson-name": "^1.1.0",
     "read-pkg": "^10.0.0",
     "vite": "^7.2.6",
